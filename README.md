@@ -1,16 +1,21 @@
-## Hi there 👋
+# Diego de Jesus Souza
 
-<!--
-**diegoxl57-commits/diegoxl57-commits** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Engenheiro civil (CREA/RJ) com foco em manutenção predial, fundações e gestão de contratos públicos. Maricá, RJ.
 
-Here are some ideas to get you started:
+Uso código para tirar trabalho manual do dia a dia de obra: planilhas, relatórios, fluxos de dados e automações.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## O que eu faço
+
+- Gestão de manutenção e obras em unidades de saúde e assistência social
+- Análise geotécnica e projeto de fundações
+- Controle de contratos, medições e compras
+- Automação de rotinas com n8n, Notion, Excel e Claude
+
+## Projetos
+
+- **Jarvis**: assistente pessoal que roda 24h em casa, com voz e painel próprio
+- Automações de relatórios e acompanhamento de obras
+
+## Contato
+
+Engenharia civil + automação | Obras, contratos e código
