@@ -20,6 +20,8 @@ def publicar(cfg: dict, video: Path, legenda: str) -> dict:
         return via_uploadpost(cfg, video, legenda, segredo("UPLOADPOST_API_KEY"))
     if metodo == "tiktok":
         return via_tiktok(cfg, video, legenda)
+    if metodo == "tiktok_rascunho":
+        return via_tiktok_rascunho(video)
     raise ErroPublicacao(f"Método de publicação desconhecido: {metodo}")
 
 
@@ -64,9 +66,7 @@ def via_tiktok(cfg: dict, video: Path, legenda: str) -> dict:
     if privacidade == "SELF_ONLY":
         print("[tiktok] Publicação pública indisponível (app ainda sem auditoria): o vídeo ficará privado.")
 
-    tamanho = video.stat().st_size
-    pedaco = tamanho if tamanho <= 64 * 1024 * 1024 else 10 * 1024 * 1024
-    total_pedacos = max(1, tamanho // pedaco)
+    tamanho, pedaco, total_pedacos = _pedacos(video)
     inicio = tiktok_api.post("/post/publish/video/init/", {
         "post_info": {
             "title": legenda[:2200],
@@ -84,21 +84,8 @@ def via_tiktok(cfg: dict, video: Path, legenda: str) -> dict:
             "total_chunk_count": total_pedacos,
         },
     })
-    publish_id, upload_url = inicio["publish_id"], inicio["upload_url"]
-
-    with open(video, "rb") as f:
-        for i in range(total_pedacos):
-            ini = i * pedaco
-            fim = tamanho - 1 if i == total_pedacos - 1 else ini + pedaco - 1  # último leva o resto
-            f.seek(ini)
-            dados = f.read(fim - ini + 1)
-            r = requests.put(
-                upload_url, data=dados, timeout=600,
-                headers={"Content-Type": "video/mp4", "Content-Length": str(len(dados)),
-                         "Content-Range": f"bytes {ini}-{fim}/{tamanho}"},
-            )
-            if r.status_code not in (200, 201, 206):
-                raise ErroPublicacao(f"Falha no envio do pedaço {i + 1}: {r.status_code} {r.text[:300]}")
+    publish_id = inicio["publish_id"]
+    _enviar_arquivo(video, inicio["upload_url"], pedaco, total_pedacos)
 
     status = "processando"
     for _ in range(60):
@@ -112,3 +99,58 @@ def via_tiktok(cfg: dict, video: Path, legenda: str) -> dict:
     ids = (status.get("publicaly_available_post_id") or []) if isinstance(status, dict) else []
     return {"metodo": "tiktok", "publish_id": publish_id, "privacidade": privacidade,
             "video_id": str(ids[0]) if ids else None, "status": status}
+
+
+def via_tiktok_rascunho(video: Path) -> dict:
+    """Envia o vídeo para a caixa de entrada do TikTok (escopo video.upload).
+
+    O TikTok avisa no app; você abre, cola a legenda, ativa o rótulo de IA e publica.
+    Esse caminho não depende da auditoria do app.
+    """
+    for nome in ("TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"):
+        segredo(nome)
+    tamanho, pedaco, total_pedacos = _pedacos(video)
+    inicio = tiktok_api.post("/post/publish/inbox/video/init/", {
+        "source_info": {
+            "source": "FILE_UPLOAD",
+            "video_size": tamanho,
+            "chunk_size": pedaco,
+            "total_chunk_count": total_pedacos,
+        },
+    })
+    publish_id = inicio["publish_id"]
+    _enviar_arquivo(video, inicio["upload_url"], pedaco, total_pedacos)
+
+    status = "processando"
+    for _ in range(36):
+        time.sleep(5)
+        st = tiktok_api.post("/post/publish/status/fetch/", {"publish_id": publish_id})
+        if st.get("status") == "FAILED":
+            raise ErroPublicacao(f"TikTok recusou o vídeo: {st.get('fail_reason')}")
+        if st.get("status") in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"):
+            status = st["status"]
+            break
+    return {"metodo": "tiktok_rascunho", "publish_id": publish_id, "status": status}
+
+
+def _pedacos(video: Path) -> tuple[int, int, int]:
+    tamanho = video.stat().st_size
+    pedaco = tamanho if tamanho <= 64 * 1024 * 1024 else 10 * 1024 * 1024
+    return tamanho, pedaco, max(1, tamanho // pedaco)
+
+
+def _enviar_arquivo(video: Path, upload_url: str, pedaco: int, total_pedacos: int) -> None:
+    tamanho = video.stat().st_size
+    with open(video, "rb") as f:
+        for i in range(total_pedacos):
+            ini = i * pedaco
+            fim = tamanho - 1 if i == total_pedacos - 1 else ini + pedaco - 1  # último leva o resto
+            f.seek(ini)
+            dados = f.read(fim - ini + 1)
+            r = requests.put(
+                upload_url, data=dados, timeout=600,
+                headers={"Content-Type": "video/mp4", "Content-Length": str(len(dados)),
+                         "Content-Range": f"bytes {ini}-{fim}/{tamanho}"},
+            )
+            if r.status_code not in (200, 201, 206):
+                raise ErroPublicacao(f"Falha no envio do pedaço {i + 1}: {r.status_code} {r.text[:300]}")

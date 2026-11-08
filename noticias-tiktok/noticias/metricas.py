@@ -27,9 +27,12 @@ def atualizar(historico: list[dict], cfg: dict) -> str:
     except tiktok_api.ErroTikTok as e:
         return f"Não consegui ler as métricas: {e}"
 
+    # no modo rascunho você publica quando puder; o vídeo pode entrar horas depois de gerado
+    rascunho = cfg.get("publicacao", {}).get("metodo") == "tiktok_rascunho"
+    janela_h = float(m.get("horas_para_publicar", 48)) if rascunho else 6.0
     atualizados = 0
     for h in alvos:
-        v = _encontrar(h, videos)
+        v = _encontrar(h, videos, janela_h)
         if not v:
             continue
         criado = datetime.fromtimestamp(int(v.get("create_time", 0)), timezone.utc)
@@ -47,7 +50,7 @@ def atualizar(historico: list[dict], cfg: dict) -> str:
     return f"Métricas atualizadas de {atualizados} de {len(alvos)} vídeos recentes."
 
 
-def _encontrar(h: dict, videos: list[dict]) -> dict | None:
+def _encontrar(h: dict, videos: list[dict], janela_h: float = 6.0) -> dict | None:
     if h.get("video_id"):
         return next((v for v in videos if str(v.get("id")) == h["video_id"]), None)
     inicio = _normal(h.get("legenda_inicio", ""))[:40]
@@ -59,6 +62,6 @@ def _encontrar(h: dict, videos: list[dict]) -> dict | None:
         texto = _normal(v.get("video_description") or v.get("title") or "")
         criado = datetime.fromtimestamp(int(v.get("create_time", 0)), timezone.utc)
         diferenca = (criado - publicado).total_seconds()
-        if texto.startswith(inicio) and -1800 <= diferenca <= 6 * 3600:
+        if texto.startswith(inicio) and -1800 <= diferenca <= janela_h * 3600:
             candidatos.append((abs(diferenca), v))
     return min(candidatos, key=lambda c: c[0])[1] if candidatos else None

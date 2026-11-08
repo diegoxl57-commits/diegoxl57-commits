@@ -22,10 +22,11 @@ def _montar_consulta(contas: list[str]) -> str:
 
 def buscar_posts(cfg: dict, bearer_token: str) -> list[dict]:
     coleta = cfg["coleta"]
-    limite = int(coleta.get("max_posts", 50))
+    x = coleta.get("x", coleta)
+    limite = int(x.get("max_posts", 50))
     inicio = datetime.now(timezone.utc) - timedelta(hours=float(coleta.get("janela_horas", 8)))
     params = {
-        "query": _montar_consulta(coleta["contas"]),
+        "query": _montar_consulta(x["contas"]),
         "start_time": inicio.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sort_order": "recency",
         "tweet.fields": "created_at,author_id,entities,note_tweet,lang",

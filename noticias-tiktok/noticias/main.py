@@ -13,7 +13,7 @@ import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import audio, coleta_x, editor, estado, estrategia, metricas, narracao, publicar, render, visual
+from . import audio, avisos, coleta_rss, coleta_x, editor, estado, estrategia, metricas, narracao, publicar, render, visual
 from .config import RAIZ, SAIDA, carregar, segredo
 
 
@@ -67,11 +67,14 @@ def main() -> int:
     # 2. coleta
     if args.demo:
         posts = json.loads((RAIZ / "exemplos" / "posts_exemplo.json").read_text(encoding="utf-8"))
-    else:
+    elif cfg["coleta"].get("fonte", "rss") == "x":
         posts = coleta_x.buscar_posts(cfg, segredo("X_BEARER_TOKEN"))
+    else:
+        posts = coleta_rss.buscar_noticias(cfg)
     usados = estado.posts_ja_usados(historico)
     posts = [p for p in posts if p["id"] not in usados]
-    print(f"[coleta] {len(posts)} posts novos.")
+    veiculos = len({p["fonte_usuario"] for p in posts})
+    print(f"[coleta] {len(posts)} notícias novas de {veiculos} veículos.")
 
     # 3. pauta e roteiro
     if args.demo and not os.environ.get("ANTHROPIC_API_KEY"):
@@ -88,11 +91,10 @@ def main() -> int:
     (pasta / "pauta.json").write_text(json.dumps(pauta, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # 4. narração
-    chave_voz = segredo("ELEVENLABS_API_KEY", obrigatorio=not args.demo)
-    if chave_voz:
-        voz, palavras = narracao.narrar(cfg, pauta["roteiro"], pasta, chave_voz)
+    if not args.demo or narracao.chave_configurada(cfg):
+        voz, palavras = narracao.narrar(cfg, pauta["roteiro"], pasta)
     else:
-        print("[narracao] Sem ELEVENLABS_API_KEY: usando áudio mudo de demonstração.")
+        print("[narracao] Demonstração sem chave de voz: usando áudio mudo.")
         voz, palavras = narracao.narracao_simulada(pauta["roteiro"], pasta, palavras_por_segundo=2.9)
 
     # 5. vídeo
@@ -118,6 +120,14 @@ def main() -> int:
     if vai_publicar:
         resultado = {"publicado": True, **publicar.publicar(cfg, video, legenda)}
         print(f"[publicacao] Enviado: {resultado}")
+        if cfg["publicacao"].get("metodo") == "tiktok_rascunho" and cfg["publicacao"].get("avisar_no_github", True):
+            try:
+                link = avisos.avisar(pauta, legenda, variante)
+                if link:
+                    resultado["aviso"] = link
+                    print(f"[aviso] Legenda pronta no GitHub: {link}")
+            except Exception as e:  # o aviso não pode derrubar a rodada: o vídeo já está no TikTok
+                print(f"[aviso] Não consegui comentar a legenda no GitHub: {e}")
     else:
         print("[publicacao] Modo de teste: vídeo gerado, mas não publicado.")
 

@@ -1,0 +1,36 @@
+name: Autorizar TikTok
+
+# Rode duas vezes: 1) com "retorno" vazio para receber o link; 2) colando o endereço de volta.
+on:
+  workflow_dispatch:
+    inputs:
+      retorno:
+        description: "Vazio = gerar o link. Depois cole aqui o endereço completo (com ?code=...) para onde o TikTok te levou."
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  autorizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: noticias-tiktok
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests PyNaCl
+      - name: Autorizar
+        env:
+          TIKTOK_CLIENT_KEY: ${{ vars.TIKTOK_CLIENT_KEY || secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REDIRECT_URI: ${{ vars.TIKTOK_REDIRECT_URI }}
+          TIKTOK_ESCOPOS: ${{ vars.TIKTOK_ESCOPOS }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          RETORNO: ${{ inputs.retorno }}
+        run: python scripts/tiktok_autorizar.py --github
