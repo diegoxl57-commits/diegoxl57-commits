@@ -1,1 +1,31 @@
-[]
+[
+ {
+  "assunto": "Tema da redação do Enem 2026 sobre o SUS",
+  "titulo": "Enem 2026: redação é sobre o SUS",
+  "gancho_tela": "5 milhões, um só tema",
+  "categoria": "brasil",
+  "ids_posts": [
+   "ccab11a6feb5ed94",
+   "4126b11e8da9d174",
+   "a1c8562ddcd5375e",
+   "d010f189d7370915",
+   "230ae3b7599ead24",
+   "a75c78e9e9c7db12",
+   "ee82cf7d8e53d304",
+   "11ddfc565e2a8e2a",
+   "14b3b2c1c0c81dc6"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 41.4,
+  "horario_local": "14:08",
+  "legenda_inicio": "Mais de 5 milhões de candidatos tiveram a inscrição confirmada, e o tema da reda",
+  "video_id": null,
+  "publicado": false,
+  "quando": "2026-11-08T17:08:22+00:00"
+ }
+]
