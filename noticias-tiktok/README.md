@@ -124,7 +124,12 @@ O relatório fica em `estado/desempenho.md`. Para o robô reconhecer o vídeo, *
 ```bash
 cd noticias-tiktok && pip install -r requirements.txt   # e instale o FFmpeg
 python -m noticias.main --demo --formato "musica=pulsante,ritmo=rapido"
+pip install pytest && python -m pytest tests -q   # testes da conferência de fontes
 ```
+
+## Conferência das fontes
+
+O Claude escolhe a notícia e diz quais posts a confirmam, mas o robô confere no código antes de usar: cada post precisa ter palavras-chave em comum com o assunto (palavras raras no dia, como nomes próprios, valem mais). Se o post de um veículo não bater, o robô procura no mesmo veículo a matéria certa; se não achar, tira o veículo da lista. Se sobrarem menos veículos que `minimo_fontes`, a rodada não gera vídeo. As fontes da legenda e do vídeo saem sempre dessa lista conferida, e o resumo da rodada mostra o que foi corrigido.
 
 ## Cuidados
 

@@ -51,5 +51,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-08T17:56:39+00:00"
+ },
+ {
+  "assunto": "Chuvas em SP: emergência em Sorocaba e mortes no ano",
+  "titulo": "Chuvas em SP: emergência e 29 mortes no ano",
+  "gancho_tela": "Chuva em SP: atenção",
+  "categoria": "clima",
+  "ids_posts": [
+   "92dabba2bbaab61c",
+   "b861328e2c1e03dc",
+   "bced32ebcc164ecf"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 31.4,
+  "horario_local": "15:34",
+  "legenda_inicio": "A mesma chuva que causa estragos em SP está enchendo o Cantareira mais rápido.\nC",
+  "video_id": null,
+  "publicado": false,
+  "quando": "2026-11-08T18:34:18+00:00"
  }
 ]
