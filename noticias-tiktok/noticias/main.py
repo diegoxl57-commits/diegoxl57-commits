@@ -189,6 +189,8 @@ def main() -> int:
         estado.salvar_relatorio(estrategia.relatorio(historico, cfg))
 
     fontes_md = "\n".join(f"- {p['veiculo']}: {p['link']}" for p in pauta.get("posts_usados", []))
+    if pauta.get("avisos_fontes"):
+        fontes_md += "\n\n**Fontes corrigidas pelo robô:**\n" + "\n".join(f"- {a}" for a in pauta["avisos_fontes"])
     formato_md = "\n".join(f"- {g}: **{variante[g]}** ({motivos[g]})" for g in estrategia.GRUPOS)
     resumo_github(
         f"### {pauta['gancho_tela']} — {pauta['titulo_tela']}\n\n"
