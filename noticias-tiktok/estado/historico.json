@@ -74,5 +74,30 @@
   "video_id": null,
   "publicado": false,
   "quando": "2026-11-08T18:34:18+00:00"
+ },
+ {
+  "assunto": "Norris vence GP de São Paulo; Mercedes campeã de construtores",
+  "titulo": "Norris vence em SP; Mercedes leva título",
+  "gancho_tela": "Norris venceu, Mercedes festejou",
+  "categoria": "esportes",
+  "ids_posts": [
+   "fbaa7483e1c8b90f",
+   "8ceca2a80349c92e",
+   "fb1b097720f4a764",
+   "719d18fef42168de",
+   "62a010e0021651b2"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 32.2,
+  "horario_local": "12:10",
+  "legenda_inicio": "Norris ganhou a corrida em Interlagos, mas quem levantou o título foi a Mercedes",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-08T19:41:46+00:00"
  }
 ]
