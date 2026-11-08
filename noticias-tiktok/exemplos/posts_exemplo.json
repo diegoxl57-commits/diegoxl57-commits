@@ -1,0 +1,29 @@
+[
+  {
+    "id": "exemplo-1",
+    "fonte_usuario": "veiculo_a",
+    "fonte_nome": "Veículo A (exemplo)",
+    "texto": "[EXEMPLO FICTÍCIO] Prefeitura de Cidade Exemplo inaugura ponte de 300 metros sobre o Rio Modelo nesta manhã.",
+    "criado_em": "2026-01-01T12:00:00.000Z",
+    "link_post": "https://x.com/veiculo_a/status/exemplo-1",
+    "link_materia": null
+  },
+  {
+    "id": "exemplo-2",
+    "fonte_usuario": "veiculo_b",
+    "fonte_nome": "Veículo B (exemplo)",
+    "texto": "[EXEMPLO FICTÍCIO] Nova ponte sobre o Rio Modelo, em Cidade Exemplo, deve reduzir em 20 minutos o trajeto entre os bairros Norte e Sul.",
+    "criado_em": "2026-01-01T12:30:00.000Z",
+    "link_post": "https://x.com/veiculo_b/status/exemplo-2",
+    "link_materia": null
+  },
+  {
+    "id": "exemplo-3",
+    "fonte_usuario": "veiculo_c",
+    "fonte_nome": "Veículo C (exemplo)",
+    "texto": "[EXEMPLO FICTÍCIO] Festival de música de Cidade Exemplo anuncia programação para o fim de semana.",
+    "criado_em": "2026-01-01T13:00:00.000Z",
+    "link_post": "https://x.com/veiculo_c/status/exemplo-3",
+    "link_materia": null
+  }
+]

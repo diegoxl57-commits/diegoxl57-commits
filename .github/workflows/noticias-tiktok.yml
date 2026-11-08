@@ -1,0 +1,90 @@
+name: Notícias TikTok
+
+on:
+  schedule:
+    # Horários de Brasília (UTC-3) → UTC
+    - cron: "40 10 * * *"   # 07:40
+    - cron: "10 15 * * *"   # 12:10
+    - cron: "40 21 * * *"   # 18:40
+    - cron: "10 0 * * *"    # 21:10
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "teste = só gera o vídeo | publicar = gera e publica no TikTok"
+        type: choice
+        options: [teste, publicar]
+        default: teste
+      formato:
+        description: 'Opcional: força opções, ex. "gancho=numero,musica=pulsante"'
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: noticias-tiktok
+  cancel-in-progress: false
+
+jobs:
+  rodada:
+    # Os horários automáticos só rodam depois que a variável ROBO_ATIVO=true for criada.
+    if: github.event_name == 'workflow_dispatch' || vars.ROBO_ATIVO == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: noticias-tiktok
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: noticias-tiktok/requirements.txt
+
+      - name: Instalar FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Gerar vídeo (e publicar, se ligado)
+        env:
+          PUBLICAR: ${{ github.event_name == 'workflow_dispatch' && inputs.modo == 'publicar' && 'true' || (github.event_name == 'schedule' && vars.PUBLICAR || 'false') }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UPLOADPOST_API_KEY: ${{ secrets.UPLOADPOST_API_KEY }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          HORARIO_AGENDADO: ${{ github.event.schedule }}
+          FORMATO: ${{ inputs.formato }}
+        run: python -m noticias.main
+
+      - name: Guardar o vídeo da rodada
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ github.run_number }}
+          path: |
+            noticias-tiktok/saida/**/video.mp4
+            noticias-tiktok/saida/**/pauta.json
+            noticias-tiktok/saida/**/resumo.json
+            noticias-tiktok/estado/desempenho.md
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Salvar histórico (evita repetir notícias)
+        if: success()
+        run: |
+          git config user.name "robo-noticias"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estado/ 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "Histórico do robô de notícias (rodada ${{ github.run_number }})"
+          git pull --rebase -q && git push
