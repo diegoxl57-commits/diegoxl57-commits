@@ -21,6 +21,10 @@ class ErroRSS(RuntimeError):
     pass
 
 
+# situação de cada feed na última coleta: {veiculo: "ok (N notícias)" | "erro: ..."}
+SITUACAO: dict[str, str] = {}
+
+
 def buscar_noticias(cfg: dict) -> list[dict]:
     coleta = cfg["coleta"]
     rss = coleta["rss"]
@@ -36,11 +40,14 @@ def buscar_noticias(cfg: dict) -> list[dict]:
             itens = ler_feed(resp.content)
         except (requests.RequestException, ET.ParseError) as e:
             falhas.append(f"{veiculo} ({e.__class__.__name__})")
+            SITUACAO[veiculo] = f"erro: {str(e)[:120]}"
             continue
         recentes = [i for i in itens if i["data"] and i["data"] >= corte]
         recentes.sort(key=lambda i: i["data"], reverse=True)
-        for i in recentes[: int(rss.get("max_por_feed", 15))]:
+        usados = recentes[: int(rss.get("max_por_feed", 15))]
+        for i in usados:
             noticias.append(_normalizar(veiculo, i))
+        SITUACAO[veiculo] = f"ok ({len(itens)} no feed, {len(usados)} recentes)"
 
     if falhas:
         print(f"[rss] Feeds indisponíveis nesta rodada: {', '.join(falhas)}")
