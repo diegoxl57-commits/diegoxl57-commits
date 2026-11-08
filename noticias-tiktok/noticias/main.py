@@ -26,6 +26,20 @@ def horario_da_rodada(fuso: ZoneInfo) -> str:
     return datetime.now(fuso).strftime("%H:%M")
 
 
+def chaves_faltando(cfg: dict) -> list[str]:
+    """Secrets obrigatórios para a configuração atual que ainda não foram cadastrados."""
+    precisa = ["ANTHROPIC_API_KEY"]
+    precisa.append({"google": "GOOGLE_TTS_API_KEY", "elevenlabs": "ELEVENLABS_API_KEY"}
+                   .get(cfg["narracao"].get("provedor", "google"), "GOOGLE_TTS_API_KEY"))
+    if cfg["coleta"].get("fonte", "rss") == "x":
+        precisa.append("X_BEARER_TOKEN")
+    if os.environ.get("PUBLICAR", "").lower() == "true":
+        metodo = cfg["publicacao"].get("metodo", "tiktok_rascunho")
+        precisa += (["UPLOADPOST_API_KEY"] if metodo == "uploadpost"
+                    else ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"])
+    return [n for n in precisa if not os.environ.get(n, "").strip()]
+
+
 def resumo_github(texto: str) -> None:
     caminho = os.environ.get("GITHUB_STEP_SUMMARY")
     if caminho:
@@ -70,11 +84,30 @@ def main() -> int:
     elif cfg["coleta"].get("fonte", "rss") == "x":
         posts = coleta_x.buscar_posts(cfg, segredo("X_BEARER_TOKEN"))
     else:
-        posts = coleta_rss.buscar_noticias(cfg)
+        try:
+            posts = coleta_rss.buscar_noticias(cfg)
+        except coleta_rss.ErroRSS as e:
+            resumo_github("### Feeds de notícias\n\n| Veículo | Situação |\n|---|---|\n" + "\n".join(
+                f"| {v} | {st} |" for v, st in coleta_rss.SITUACAO.items()) + f"\n\n**{e}**\n")
+            print(f"[coleta] {e}")
+            return 1
     usados = estado.posts_ja_usados(historico)
     posts = [p for p in posts if p["id"] not in usados]
     veiculos = len({p["fonte_usuario"] for p in posts})
     print(f"[coleta] {len(posts)} notícias novas de {veiculos} veículos.")
+    if coleta_rss.SITUACAO:
+        resumo_github("### Feeds de notícias\n\n| Veículo | Situação |\n|---|---|\n" + "\n".join(
+            f"| {v} | {st} |" for v, st in coleta_rss.SITUACAO.items()) + "\n")
+
+    if not args.demo:
+        faltando = chaves_faltando(cfg)
+        if faltando:
+            msg = "Faltam estes secrets para gerar o vídeo: " + ", ".join(f"`{n}`" for n in faltando)
+            print(f"[config] {msg}")
+            resumo_github(f"### Configuração incompleta\n\n{msg}.\n\n"
+                          "Cadastre em *Settings → Secrets and variables → Actions* e rode de novo. "
+                          "O passo a passo está em `noticias-tiktok/README.md`.")
+            return 1
 
     # 3. pauta e roteiro
     if args.demo and not os.environ.get("ANTHROPIC_API_KEY"):
