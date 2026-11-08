@@ -27,5 +27,29 @@
   "video_id": null,
   "publicado": false,
   "quando": "2026-11-08T17:08:22+00:00"
+ },
+ {
+  "assunto": "Alcaraz vence Shelton e conquista Masters 1000 de Paris",
+  "titulo": "Alcaraz conquista o Masters de Paris",
+  "gancho_tela": "Alcaraz campeão em Paris",
+  "categoria": "esportes",
+  "ids_posts": [
+   "4d5fe8e06a1cf754",
+   "6753ae4fd80e8a46",
+   "626d998dc23d0254",
+   "f27d4c416ff71536"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 36.7,
+  "horario_local": "14:56",
+  "legenda_inicio": "Pela primeira vez, Carlos Alcaraz levanta o troféu do Masters 1000 de Paris.\nVoc",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-08T17:56:39+00:00"
  }
 ]
