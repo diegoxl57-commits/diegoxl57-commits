@@ -1,0 +1,80 @@
+# Configuração do robô de notícias para o TikTok.
+# Chaves e senhas NÃO ficam aqui: elas vão nos "Secrets" do GitHub (veja o README).
+
+canal:
+  nome: "Notícias em 1 Minuto"   # aparece no topo do vídeo
+  idioma: "pt-BR"
+  fuso_horario: "America/Sao_Paulo"
+
+# ---------------------------------------------------------------------------
+# 1. Coleta no X
+# Só contas de veículos estabelecidos. O robô só usa uma notícia quando ela
+# aparece em pelo menos `minimo_fontes` veículos diferentes.
+# ---------------------------------------------------------------------------
+coleta:
+  contas:
+    - g1
+    - folha
+    - Estadao
+    - CNNBrasil
+    - UOLNoticias
+    - JornalOGlobo
+    - BBCBrasil
+    - agenciabrasil
+    - VEJA
+    - metropoles
+  janela_horas: 8          # só posts das últimas N horas
+  max_posts: 50            # a API do X cobra por post lido (cerca de US$ 0,005 cada)
+  minimo_fontes: 2         # confirmação mínima por veículos diferentes
+
+# ---------------------------------------------------------------------------
+# 2. Editor (Claude)
+# ---------------------------------------------------------------------------
+editor:
+  modelo: "claude-opus-5-5"
+  esforco: "medium"        # low | medium | high
+  palavras_roteiro: [110, 150]   # ~45 a 60 segundos de narração
+  evitar_repetir_dias: 3   # não repete assunto coberto nos últimos N dias
+
+# ---------------------------------------------------------------------------
+# 3. Narração (ElevenLabs)
+# ---------------------------------------------------------------------------
+narracao:
+  voice_id: "eUAnqvLQWNX29twcYLUM"   # "Dyego Noticias" (voz brasileira para notícias)
+  modelo: "eleven_multilingual_v2"
+  estabilidade: 0.45
+  similaridade: 0.8
+  estilo: 0.15
+  velocidade: 1.05
+
+# ---------------------------------------------------------------------------
+# 4. Vídeo
+# ---------------------------------------------------------------------------
+video:
+  largura: 1080
+  altura: 1920
+  fps: 30
+  clipes_fundo: 4          # vídeos de banco de imagens (Pexels) por notícia
+  cor_destaque: "#FFD400"  # palavra falada na legenda
+  cor_marca: "#E1251B"     # faixa do canal e barra de progresso
+  mostrar_selo_ia: true    # "Narração gerada por IA" no vídeo
+  musica_fundo: ""         # caminho de um MP3 livre de direitos (opcional)
+  volume_musica: 0.08
+
+# ---------------------------------------------------------------------------
+# 5. Publicação
+# metodo: "uploadpost" (publica público sem auditoria do TikTok, serviço pago)
+#         "tiktok"     (API oficial; vídeos ficam PRIVADOS até o app ser aprovado)
+# A publicação de verdade só acontece com a variável PUBLICAR=true no GitHub.
+# ---------------------------------------------------------------------------
+publicacao:
+  metodo: "uploadpost"
+  marcar_como_ia: true     # rótulo "gerado por IA" do TikTok (exigido para conteúdo sintético)
+  permitir_comentarios: true
+  uploadpost:
+    perfil: "noticias"     # nome do perfil criado no painel do Upload-Post
+    campos_extras: {}      # campos adicionais aceitos pela API do Upload-Post, se precisar
+
+# Horários de publicação (horário de Brasília). Eles ficam de fato no arquivo
+# .github/workflows/noticias-tiktok.yml, em UTC (Brasília = UTC-3).
+# 07:40, 12:10, 18:40 e 21:10 — picos de audiência no Brasil.

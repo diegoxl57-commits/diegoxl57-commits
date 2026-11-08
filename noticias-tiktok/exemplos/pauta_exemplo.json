@@ -1,0 +1,14 @@
+{
+  "status": "pauta",
+  "motivo": "Exemplo fixo para testar o visual sem chaves de API.",
+  "assunto_resumido": "Demonstração do canal automático",
+  "categoria": "tecnologia",
+  "titulo_tela": "Vídeo de demonstração do seu canal de notícias",
+  "roteiro": "Este é um vídeo de demonstração do seu novo canal de notícias automático. A cada rodada, o sistema lê as publicações mais recentes de grandes veículos de imprensa no X e escolhe um assunto que tenha sido confirmado por pelo menos dois deles. Em seguida, escreve um roteiro curto e neutro, gera a narração, monta o vídeo com legendas sincronizadas e publica no TikTok nos horários de maior audiência. Tudo isso acontece sozinho, várias vezes por dia. As fontes sempre aparecem na tela e na legenda. Siga o canal para mais notícias.",
+  "legenda": "Vídeo de demonstração do canal automático de notícias. Fontes: exemplo.",
+  "hashtags": ["noticias", "brasil", "tecnologia", "demonstracao"],
+  "fontes": ["Exemplo"],
+  "ids_posts_usados": [],
+  "palavras_chave_imagens": ["newsroom", "city night timelapse", "smartphone news"],
+  "posts_usados": []
+}
