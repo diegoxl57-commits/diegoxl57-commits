@@ -7,25 +7,32 @@ canal:
   fuso_horario: "America/Sao_Paulo"
 
 # ---------------------------------------------------------------------------
-# 1. Coleta no X
-# Só contas de veículos estabelecidos. O robô só usa uma notícia quando ela
-# aparece em pelo menos `minimo_fontes` veículos diferentes.
+# 1. Coleta de notícias
+# fonte: "rss" (grátis: feeds dos próprios sites) ou "x" (API do X, paga por post lido)
+# Só veículos estabelecidos. O robô só usa uma notícia quando ela aparece em
+# pelo menos `minimo_fontes` veículos diferentes.
 # ---------------------------------------------------------------------------
 coleta:
-  contas:
-    - g1
-    - folha
-    - Estadao
-    - CNNBrasil
-    - UOLNoticias
-    - JornalOGlobo
-    - BBCBrasil
-    - agenciabrasil
-    - VEJA
-    - metropoles
-  janela_horas: 8          # só posts das últimas N horas
-  max_posts: 50            # a API do X cobra por post lido (cerca de US$ 0,005 cada)
+  fonte: "rss"
+  janela_horas: 8          # só notícias das últimas N horas
   minimo_fontes: 2         # confirmação mínima por veículos diferentes
+  rss:
+    max_por_feed: 15       # manchetes mais recentes de cada veículo
+    feeds:                 # feed fora do ar é ignorado (aparece um aviso no log da rodada)
+      g1: "https://g1.globo.com/rss/g1/"
+      Folha de S.Paulo: "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"
+      CNN Brasil: "https://www.cnnbrasil.com.br/feed/"
+      BBC News Brasil: "https://feeds.bbci.co.uk/portuguese/rss.xml"
+      Agência Brasil: "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
+      UOL: "https://rss.uol.com.br/feed/noticias.xml"
+      Metrópoles: "https://www.metropoles.com/feed"
+      Poder360: "https://www.poder360.com.br/feed/"
+      Veja: "https://veja.abril.com.br/feed/"
+      DW Brasil: "https://rss.dw.com/rdf/rss-br-all"
+      InfoMoney: "https://www.infomoney.com.br/feed/"
+  x:                       # usado só com fonte: "x"
+    max_posts: 50
+    contas: [g1, folha, Estadao, CNNBrasil, UOLNoticias, JornalOGlobo, BBCBrasil, agenciabrasil, VEJA, metropoles]
 
 # ---------------------------------------------------------------------------
 # 2. Editor (Claude)
@@ -37,15 +44,22 @@ editor:
   # O tamanho do roteiro vem de "variantes.duracao", mais abaixo.
 
 # ---------------------------------------------------------------------------
-# 3. Narração (ElevenLabs)
+# 3. Narração
+# provedor: "google" (grátis até 1 milhão de caracteres/mês) ou "elevenlabs" (pago)
 # ---------------------------------------------------------------------------
 narracao:
-  voice_id: "eUAnqvLQWNX29twcYLUM"   # "Dyego Noticias" (voz brasileira para notícias)
-  modelo: "eleven_multilingual_v2"
-  estabilidade: 0.38       # um pouco menor = mais energia na fala
-  similaridade: 0.8
-  estilo: 0.3
-  velocidade: 1.1          # ritmo de TikTok
+  provedor: "google"
+  google:
+    vozes: ["pt-BR-Neural2-B", "pt-BR-Wavenet-B", "pt-BR-Standard-B"]  # tenta na ordem
+    velocidade: 1.12       # ritmo de TikTok
+    tom: -1.0              # um pouco mais grave
+  elevenlabs:
+    voice_id: "eUAnqvLQWNX29twcYLUM"   # "Dyego Noticias"
+    modelo: "eleven_multilingual_v2"
+    estabilidade: 0.38
+    similaridade: 0.8
+    estilo: 0.3
+    velocidade: 1.1
 
 # ---------------------------------------------------------------------------
 # 4. Vídeo
@@ -96,12 +110,15 @@ aprendizado:
 
 # ---------------------------------------------------------------------------
 # 5. Publicação
-# metodo: "uploadpost" (publica público sem auditoria do TikTok, serviço pago)
-#         "tiktok"     (API oficial; vídeos ficam PRIVADOS até o app ser aprovado)
-# A publicação de verdade só acontece com a variável PUBLICAR=true no GitHub.
+# metodo: "tiktok_rascunho" (grátis: o vídeo chega na caixa de entrada do seu TikTok
+#                            e você publica com um toque; a legenda chega no GitHub)
+#         "tiktok"          (API oficial direta; fica PRIVADO até o app passar na auditoria)
+#         "uploadpost"      (serviço pago; publica público sem nenhum toque)
+# O envio só acontece com a variável PUBLICAR=true no GitHub.
 # ---------------------------------------------------------------------------
 publicacao:
-  metodo: "uploadpost"
+  metodo: "tiktok_rascunho"
+  avisar_no_github: true   # comenta a legenda pronta numa issue do repositório (notifica o app do GitHub)
   marcar_como_ia: true     # rótulo "gerado por IA" do TikTok (exigido para conteúdo sintético)
   permitir_comentarios: true
   uploadpost:
@@ -114,6 +131,7 @@ publicacao:
 metricas:
   ativo: true
   dias_acompanhamento: 7   # atualiza os números de cada vídeo durante 7 dias
+  horas_para_publicar: 48  # no modo rascunho, prazo para você publicar e o robô reconhecer o vídeo
 
 # Horários de publicação (horário de Brasília). Eles ficam de fato no arquivo
 # .github/workflows/noticias-tiktok.yml, em UTC (Brasília = UTC-3).

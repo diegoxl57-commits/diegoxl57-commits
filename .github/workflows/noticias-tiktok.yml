@@ -20,7 +20,8 @@ on:
         default: ""
 
 permissions:
-  contents: write
+  contents: write   # salvar o histórico
+  issues: write     # comentar a legenda pronta (modo rascunho)
 
 concurrency:
   group: noticias-tiktok
@@ -55,13 +56,15 @@ jobs:
           PUBLICAR: ${{ github.event_name == 'workflow_dispatch' && inputs.modo == 'publicar' && 'true' || (github.event_name == 'schedule' && vars.PUBLICAR || 'false') }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           UPLOADPOST_API_KEY: ${{ secrets.UPLOADPOST_API_KEY }}
-          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_KEY: ${{ vars.TIKTOK_CLIENT_KEY || secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HORARIO_AGENDADO: ${{ github.event.schedule }}
           FORMATO: ${{ inputs.formato }}
         run: python -m noticias.main
