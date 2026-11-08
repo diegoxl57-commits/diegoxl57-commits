@@ -14,7 +14,7 @@ from urllib.parse import parse_qs, quote, unquote, urlparse
 
 import requests
 
-ESCOPOS = "user.info.basic,video.publish"
+ESCOPOS = "user.info.basic,video.list,video.publish"
 
 
 def main() -> None:
@@ -23,12 +23,14 @@ def main() -> None:
     ap.add_argument("--client-secret")
     ap.add_argument("--redirect-uri", required=True)
     ap.add_argument("--retorno", help="endereço completo para onde o TikTok redirecionou")
+    ap.add_argument("--escopos", default=ESCOPOS,
+                    help="use 'user.info.basic,video.list' se for publicar pelo Upload-Post e só ler métricas")
     a = ap.parse_args()
 
     if not a.retorno:
         url = (
             "https://www.tiktok.com/v2/auth/authorize/"
-            f"?client_key={a.client_key}&scope={ESCOPOS}&response_type=code"
+            f"?client_key={a.client_key}&scope={a.escopos}&response_type=code"
             f"&redirect_uri={quote(a.redirect_uri, safe='')}&state={secrets.token_urlsafe(8)}"
         )
         print("Abra este link, autorize e copie o endereço final do navegador:\n")

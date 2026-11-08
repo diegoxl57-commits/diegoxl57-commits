@@ -14,6 +14,10 @@ on:
         type: choice
         options: [teste, publicar]
         default: teste
+      formato:
+        description: 'Opcional: força opções, ex. "gancho=numero,musica=pulsante"'
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -58,6 +62,8 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
+          HORARIO_AGENDADO: ${{ github.event.schedule }}
+          FORMATO: ${{ inputs.formato }}
         run: python -m noticias.main
 
       - name: Guardar o vídeo da rodada
@@ -69,6 +75,7 @@ jobs:
             noticias-tiktok/saida/**/video.mp4
             noticias-tiktok/saida/**/pauta.json
             noticias-tiktok/saida/**/resumo.json
+            noticias-tiktok/estado/desempenho.md
           retention-days: 14
           if-no-files-found: ignore
 
@@ -77,7 +84,7 @@ jobs:
         run: |
           git config user.name "robo-noticias"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add estado/historico.json 2>/dev/null || exit 0
+          git add estado/ 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0
           git commit -m "Histórico do robô de notícias (rodada ${{ github.run_number }})"
           git pull --rebase -q && git push

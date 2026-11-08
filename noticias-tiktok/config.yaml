@@ -33,8 +33,8 @@ coleta:
 editor:
   modelo: "claude-opus-5-5"
   esforco: "medium"        # low | medium | high
-  palavras_roteiro: [110, 150]   # ~45 a 60 segundos de narração
   evitar_repetir_dias: 3   # não repete assunto coberto nos últimos N dias
+  # O tamanho do roteiro vem de "variantes.duracao", mais abaixo.
 
 # ---------------------------------------------------------------------------
 # 3. Narração (ElevenLabs)
@@ -42,10 +42,10 @@ editor:
 narracao:
   voice_id: "eUAnqvLQWNX29twcYLUM"   # "Dyego Noticias" (voz brasileira para notícias)
   modelo: "eleven_multilingual_v2"
-  estabilidade: 0.45
+  estabilidade: 0.38       # um pouco menor = mais energia na fala
   similaridade: 0.8
-  estilo: 0.15
-  velocidade: 1.05
+  estilo: 0.3
+  velocidade: 1.1          # ritmo de TikTok
 
 # ---------------------------------------------------------------------------
 # 4. Vídeo
@@ -54,12 +54,45 @@ video:
   largura: 1080
   altura: 1920
   fps: 30
-  clipes_fundo: 4          # vídeos de banco de imagens (Pexels) por notícia
-  cor_destaque: "#FFD400"  # palavra falada na legenda
-  cor_marca: "#E1251B"     # faixa do canal e barra de progresso
+  clipes_fundo: 6          # vídeos de banco de imagens (Pexels) baixados por notícia
+  cor_destaque: "#FFD400"  # palavra sendo falada
+  cor_chave: "#3DFF8B"     # números e palavras-chave
+  cor_marca: "#E1251B"     # faixas do canal e barra de progresso
   mostrar_selo_ia: true    # "Narração gerada por IA" no vídeo
-  musica_fundo: ""         # caminho de um MP3 livre de direitos (opcional)
-  volume_musica: 0.08
+  volume_musica: 0.16      # trilha (abaixa sozinha quando a voz fala)
+  volume_efeitos: 0.55     # "whoosh" nos cortes, impacto no gancho, sino na pergunta
+  # Para usar músicas próprias livres de direitos, coloque MP3s em assets/musicas/.
+
+# ---------------------------------------------------------------------------
+# Formato viral: o robô testa variações e aprende com os números do TikTok.
+# Cada vídeo sorteia uma opção de cada grupo abaixo. Com o tempo, as opções que
+# geram mais visualizações e interação passam a ser escolhidas com mais frequência.
+# ---------------------------------------------------------------------------
+variantes:
+  gancho:                  # como começa o vídeo (sempre fiel aos fatos)
+    pergunta: "Abra com uma pergunta direta que a própria notícia responde logo em seguida."
+    numero: "Abra com o número ou dado mais forte da notícia."
+    impacto: "Abra pelo efeito direto na vida de quem assiste: bolso, rotina, saúde ou segurança."
+    novidade: "Abra com o fato mais novo, em tom de plantão (só se aconteceu nas últimas horas)."
+    contraste: "Abra com um contraste ou surpresa que esteja de fato nos posts."
+  duracao:                 # faixa de palavras do roteiro
+    curto: [60, 80]        # ~25 a 32 segundos
+    medio: [85, 110]       # ~35 a 45 segundos
+  ritmo:                   # segundos entre cortes de cena
+    rapido: 2.2
+    normal: 3.4
+  musica:
+    pulsante: "trilha com batida leve"
+    tensa: "trilha de plantão, sem batida"
+    sem: "só voz e efeitos"
+
+aprendizado:
+  ativo: true
+  horas_para_medir: 24     # só avalia vídeos com pelo menos 24h no ar
+  minimo_por_opcao: 3      # cada opção é testada pelo menos 3 vezes antes de comparar
+  exploracao: 0.2          # 20% das vezes testa uma opção aleatória, mesmo já havendo vencedora
+  peso_visualizacoes: 0.6
+  peso_interacao: 0.4      # curtidas, comentários (x2) e compartilhamentos (x3) por visualização
 
 # ---------------------------------------------------------------------------
 # 5. Publicação
@@ -74,6 +107,13 @@ publicacao:
   uploadpost:
     perfil: "noticias"     # nome do perfil criado no painel do Upload-Post
     campos_extras: {}      # campos adicionais aceitos pela API do Upload-Post, se precisar
+
+# Leitura dos números (visualizações, curtidas, comentários, compartilhamentos)
+# pela API oficial do TikTok, escopo "video.list". Funciona com qualquer método de
+# publicação. Sem os secrets TIKTOK_*, o robô continua variando o formato, mas sem aprender.
+metricas:
+  ativo: true
+  dias_acompanhamento: 7   # atualiza os números de cada vídeo durante 7 dias
 
 # Horários de publicação (horário de Brasília). Eles ficam de fato no arquivo
 # .github/workflows/noticias-tiktok.yml, em UTC (Brasília = UTC-3).

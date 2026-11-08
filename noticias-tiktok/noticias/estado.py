@@ -1,17 +1,28 @@
-"""Histórico do que já foi produzido, para não repetir assuntos nem posts."""
+"""Histórico do que já foi produzido: evita repetir assuntos e guarda os números de cada vídeo."""
 import json
 from datetime import datetime, timedelta, timezone
 
 from .config import ESTADO
 
 ARQUIVO = ESTADO / "historico.json"
-LIMITE = 300
+RELATORIO = ESTADO / "desempenho.md"
+LIMITE = 400
 
 
 def carregar() -> list[dict]:
     if ARQUIVO.exists():
         return json.loads(ARQUIVO.read_text(encoding="utf-8"))
     return []
+
+
+def salvar(historico: list[dict]) -> None:
+    ESTADO.mkdir(parents=True, exist_ok=True)
+    ARQUIVO.write_text(json.dumps(historico[-LIMITE:], ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def salvar_relatorio(texto: str) -> None:
+    ESTADO.mkdir(parents=True, exist_ok=True)
+    RELATORIO.write_text(texto, encoding="utf-8")
 
 
 def assuntos_recentes(historico: list[dict], dias: int) -> list[str]:
@@ -29,5 +40,4 @@ def posts_ja_usados(historico: list[dict]) -> set[str]:
 def registrar(historico: list[dict], item: dict) -> None:
     item["quando"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     historico.append(item)
-    ESTADO.mkdir(parents=True, exist_ok=True)
-    ARQUIVO.write_text(json.dumps(historico[-LIMITE:], ensure_ascii=False, indent=1), encoding="utf-8")
+    salvar(historico)
