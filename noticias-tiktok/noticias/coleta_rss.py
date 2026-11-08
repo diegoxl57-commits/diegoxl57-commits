@@ -57,8 +57,25 @@ def buscar_noticias(cfg: dict) -> list[dict]:
     return noticias
 
 
+ENTIDADE_SOLTA = re.compile(r"&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)")
+CONTROLE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+DECLARACAO = re.compile(rb"<\?xml[^>]*encoding=[\"']([\w.-]+)[\"']", re.I)
+
+
+def _xml_tolerante(conteudo: bytes) -> ET.Element:
+    """Alguns feeds trazem '&' solto, entidades de HTML ou caracteres de controle; corrige e tenta de novo."""
+    try:
+        return ET.fromstring(conteudo)
+    except ET.ParseError:
+        m = DECLARACAO.search(conteudo[:200])
+        texto = conteudo.decode(m.group(1).decode() if m else "utf-8", errors="replace")
+        texto = re.sub(r"<\?xml[^>]*\?>", "", texto, count=1)
+        texto = CONTROLE.sub("", ENTIDADE_SOLTA.sub("&amp;", texto))
+        return ET.fromstring(texto)
+
+
 def ler_feed(conteudo: bytes) -> list[dict]:
-    raiz = ET.fromstring(conteudo)
+    raiz = _xml_tolerante(conteudo)
     itens = []
     # RSS 2.0
     for it in raiz.iter("item"):
