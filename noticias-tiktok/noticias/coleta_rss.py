@@ -68,7 +68,11 @@ def _xml_tolerante(conteudo: bytes) -> ET.Element:
         return ET.fromstring(conteudo)
     except ET.ParseError:
         m = DECLARACAO.search(conteudo[:200])
-        texto = conteudo.decode(m.group(1).decode() if m else "utf-8", errors="replace")
+        try:
+            texto = conteudo.decode(m.group(1).decode() if m else "utf-8")
+        except (UnicodeDecodeError, LookupError):
+            # feeds sem declaração servidos em ISO-8859-1 (ex.: UOL): cp1252 cobre os acentos
+            texto = conteudo.decode("cp1252", errors="replace")
         texto = re.sub(r"<\?xml[^>]*\?>", "", texto, count=1)
         texto = CONTROLE.sub("", ENTIDADE_SOLTA.sub("&amp;", texto))
         return ET.fromstring(texto)
