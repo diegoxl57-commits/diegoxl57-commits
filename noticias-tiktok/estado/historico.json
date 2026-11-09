@@ -170,5 +170,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-09T21:08:02+00:00"
+ },
+ {
+  "assunto": "Justiça suspende novas regras do governo para VR e VA",
+  "titulo": "Justiça suspende novas regras de VR e VA",
+  "gancho_tela": "Regras do VR e VA suspensas",
+  "categoria": "economia",
+  "ids_posts": [
+   "57e16d9dd2257a95",
+   "e63c24bc42e4c0c8",
+   "e2edf3b339a5f542",
+   "2b657deabef1ae77",
+   "8928a3ece6ba3804"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 41.3,
+  "horario_local": "12:10",
+  "legenda_inicio": "As novas regras do VR e VA duraram só dois dias antes de serem suspensas pela Ju",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-09T23:48:57+00:00"
  }
 ]
