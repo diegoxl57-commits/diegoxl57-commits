@@ -147,5 +147,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-09T06:21:29+00:00"
+ },
+ {
+  "assunto": "França acusa Irã de ataque hacker a geladeiras de supermercados",
+  "titulo": "França acusa Irã de hackear supermercados",
+  "gancho_tela": "Hackers desligaram geladeiras?",
+  "categoria": "mundo",
+  "ids_posts": [
+   "f94c124c87e3912d",
+   "069394d5fa4250cb",
+   "fc81ca871d44e2f0"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 38.3,
+  "horario_local": "07:40",
+  "legenda_inicio": "Um ataque hacker fez geladeiras de centenas de supermercados esquentarem na Fran",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-09T21:08:02+00:00"
  }
 ]
