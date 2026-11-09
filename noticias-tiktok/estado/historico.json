@@ -123,5 +123,29 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-09T01:16:04+00:00"
+ },
+ {
+  "assunto": "Pronunciamento de Lula após reeleição: promessa fiscal sem detalhes",
+  "titulo": "Lula promete rigor fiscal sem detalhar",
+  "gancho_tela": "Promessa fiscal sem detalhes",
+  "categoria": "politica",
+  "ids_posts": [
+   "8923e56b3ff9865c",
+   "effd637a3d10c7ee",
+   "988fca1e9fd11a81",
+   "04f09bc500cd22ac"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 31.9,
+  "horario_local": "21:10",
+  "legenda_inicio": "No primeiro discurso após a reeleição, Lula prometeu responsabilidade fiscal, ma",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-09T06:21:29+00:00"
  }
 ]
