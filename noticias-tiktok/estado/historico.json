@@ -99,5 +99,29 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-08T19:41:46+00:00"
+ },
+ {
+  "assunto": "Abstenção de 32% no 1º dia do Enem 2026",
+  "titulo": "Enem 2026: 32% faltaram no 1º dia",
+  "gancho_tela": "Faltas recordes no Enem",
+  "categoria": "brasil",
+  "ids_posts": [
+   "79b720853245963f",
+   "b2222b5dad8af4ac",
+   "23291e6d52ddaa31",
+   "315d9c24218b4853"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "tensa"
+  },
+  "duracao_s": 37.9,
+  "horario_local": "18:40",
+  "legenda_inicio": "Mesmo com inscrição automática para a rede pública, o Enem teve a maior abstençã",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-09T01:16:04+00:00"
  }
 ]
