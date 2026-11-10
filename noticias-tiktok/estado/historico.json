@@ -220,5 +220,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-10T03:50:17+00:00"
+ },
+ {
+  "assunto": "Judiciário e MPU pedem R$ 533 milhões para penduricalhos",
+  "titulo": "Judiciário pede R$ 533 mi para penduricalhos",
+  "gancho_tela": "R$ 533 milhões a mais",
+  "categoria": "politica",
+  "ids_posts": [
+   "0ad0efcd466a8ac1",
+   "73ecf6f0090f84dc"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "tensa"
+  },
+  "duracao_s": 31.6,
+  "horario_local": "21:10",
+  "legenda_inicio": "Judiciário e MPU dizem ao STF que precisam de R$ 533 milhões extras para pagar p",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-10T07:14:50+00:00"
  }
 ]
