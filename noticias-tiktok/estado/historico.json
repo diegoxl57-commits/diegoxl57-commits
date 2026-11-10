@@ -195,5 +195,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-09T23:48:57+00:00"
+ },
+ {
+  "assunto": "Fachin arquiva inquérito das fake news após mais de sete anos",
+  "titulo": "Fachin arquiva inquérito das fake news",
+  "gancho_tela": "2.797 dias. Acabou",
+  "categoria": "politica",
+  "ids_posts": [
+   "e1055c721f19e01b",
+   "fa81853cbdd7c4c5",
+   "da3f87cd70b9d115",
+   "05b0b06b6ae2f05e",
+   "142159e04017aa03"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 29.9,
+  "horario_local": "18:40",
+  "legenda_inicio": "Depois de mais de sete anos, o inquérito das fake news chegou ao fim no STF.\nVoc",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-10T03:50:17+00:00"
  }
 ]
