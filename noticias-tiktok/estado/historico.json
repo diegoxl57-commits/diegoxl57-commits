@@ -242,5 +242,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-10T07:14:50+00:00"
+ },
+ {
+  "assunto": "Compra de 425 iPhones pelo Senado gera críticas e ação judicial",
+  "titulo": "Compra de iPhones pelo Senado vira polêmica",
+  "gancho_tela": "425 iPhones no Senado",
+  "categoria": "politica",
+  "ids_posts": [
+   "f2ba25a05e210010",
+   "24b8f0e39157abd4"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "tensa"
+  },
+  "duracao_s": 36.5,
+  "horario_local": "07:40",
+  "legenda_inicio": "Um edital do Senado prevê 425 celulares, com custo estimado de R$ 6 milhões.\nPar",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-10T18:18:24+00:00"
  }
 ]
