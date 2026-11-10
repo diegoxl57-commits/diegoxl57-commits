@@ -264,5 +264,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-10T18:18:24+00:00"
+ },
+ {
+  "assunto": "Dólar fecha no maior valor do ano após inflação nos EUA",
+  "titulo": "Dólar fecha a R$ 5,58, maior valor de 2026",
+  "gancho_tela": "Dólar no maior valor do ano",
+  "categoria": "economia",
+  "ids_posts": [
+   "f9bddf4a315f34b8",
+   "60c652eea353b9cb",
+   "d5b5ced121c95283"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "tensa"
+  },
+  "duracao_s": 43.0,
+  "horario_local": "12:10",
+  "legenda_inicio": "A inflação nos EUA empurrou o dólar para o maior valor do ano.\nO dólar alto já p",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-10T21:20:37+00:00"
  }
 ]
