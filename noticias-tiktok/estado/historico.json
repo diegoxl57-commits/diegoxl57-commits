@@ -309,5 +309,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-11T01:31:20+00:00"
+ },
+ {
+  "assunto": "Relator da PEC defende maioridade penal aos 16 anos",
+  "titulo": "Relator defende maioridade penal aos 16",
+  "gancho_tela": "Maioridade penal aos 16?",
+  "categoria": "politica",
+  "ids_posts": [
+   "9caa12b65509a6ba",
+   "612157c257aeb97b"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 30.4,
+  "horario_local": "21:10",
+  "legenda_inicio": "O relator da PEC quer punição criminal a partir dos 16 anos, com pena cumprida l",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-11T06:11:11+00:00"
  }
 ]
