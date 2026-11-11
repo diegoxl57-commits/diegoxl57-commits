@@ -331,5 +331,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-11T06:11:11+00:00"
+ },
+ {
+  "assunto": "Espanha tem primeira greve geral em 14 anos por moradia",
+  "titulo": "Espanha faz 1ª greve geral em 14 anos",
+  "gancho_tela": "Por que a Espanha parou?",
+  "categoria": "mundo",
+  "ids_posts": [
+   "690ebb13ee3a8013",
+   "51b693b1b6b5c696",
+   "1ee1c7cc873641f8",
+   "be04acc811f60995",
+   "9d75b79cc646da87"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 42.2,
+  "horario_local": "07:40",
+  "legenda_inicio": "A Espanha não tinha uma greve geral havia 14 anos, e o motivo central é o preço ",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-11T18:05:32+00:00"
  }
 ]
