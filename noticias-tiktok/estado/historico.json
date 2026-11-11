@@ -356,5 +356,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-11T18:05:32+00:00"
+ },
+ {
+  "assunto": "Senado aprova MP rural e retira brecha para cigarro eletrônico",
+  "titulo": "Senado barra brecha para cigarro eletrônico",
+  "gancho_tela": "Cigarro eletrônico fica de fora",
+  "categoria": "politica",
+  "ids_posts": [
+   "9bd10cc2e3f54955",
+   "63c95806d166a175",
+   "e59682f60b23969d",
+   "3b2697d4be7a6e6e",
+   "332288460a8f5940"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 27.7,
+  "horario_local": "12:10",
+  "legenda_inicio": "Um trecho de setenta palavras sobre cigarros eletrônicos entrou num projeto de d",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-11T21:56:56+00:00"
  }
 ]
