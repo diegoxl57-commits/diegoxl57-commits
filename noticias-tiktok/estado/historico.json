@@ -287,5 +287,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-10T21:20:37+00:00"
+ },
+ {
+  "assunto": "Ata do Copom indica juros altos por mais tempo",
+  "titulo": "Copom indica juros altos por mais tempo",
+  "gancho_tela": "Crédito caro por mais tempo",
+  "categoria": "economia",
+  "ids_posts": [
+   "354bb1c0bcb5d028",
+   "37d69b24d698c199"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 39.6,
+  "horario_local": "18:40",
+  "legenda_inicio": "O Banco Central avisou: os juros devem continuar altos por mais tempo.\nOs juros ",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-11T01:31:20+00:00"
  }
 ]
