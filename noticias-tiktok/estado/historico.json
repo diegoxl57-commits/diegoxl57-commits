@@ -381,5 +381,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-11T21:56:56+00:00"
+ },
+ {
+  "assunto": "Covid volta a crescer no Brasil com variante XFG predominante",
+  "titulo": "Casos graves de covid sobem em 5 estados",
+  "gancho_tela": "Covid volta a crescer",
+  "categoria": "saude",
+  "ids_posts": [
+   "40a0d0da2e7e1d57",
+   "29eedf37111ac6db",
+   "f478ad8228a5bdf5"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 31.0,
+  "horario_local": "18:40",
+  "legenda_inicio": "Uma única família de variantes responde por cerca de 90% das amostras de covid a",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-12T02:33:35+00:00"
  }
 ]
