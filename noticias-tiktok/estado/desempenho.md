@@ -1,5 +1,5 @@
 # Desempenho do canal
 
-Vídeos publicados: **16**, com números maduros (24h ou mais): **0**.
+Vídeos publicados: **17**, com números maduros (24h ou mais): **0**.
 
 Ainda não há números suficientes. O relatório se preenche sozinho conforme os vídeos completam 24h no ar.

@@ -428,5 +428,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-12T07:08:28+00:00"
+ },
+ {
+  "assunto": "Dino mantém transição do fim da escala 6x1",
+  "titulo": "Dino mantém cronograma do fim da 6x1",
+  "gancho_tela": "Jornada menor segue para dezembro",
+  "categoria": "brasil",
+  "ids_posts": [
+   "53fd3c5d5c2d4e72",
+   "940f0a3f16293ffb"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 39.9,
+  "horario_local": "07:40",
+  "legenda_inicio": "A transição para o fim da escala 6x1 segue no calendário, com mudança nas folgas",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-12T18:38:49+00:00"
  }
 ]
