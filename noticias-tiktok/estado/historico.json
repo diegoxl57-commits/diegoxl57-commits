@@ -404,5 +404,29 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-12T02:33:35+00:00"
+ },
+ {
+  "assunto": "Lucro do Banco do Brasil cai com inadimplência do agro",
+  "titulo": "Lucro do Banco do Brasil cai 66,5%",
+  "gancho_tela": "Lucro do BB despenca",
+  "categoria": "economia",
+  "ids_posts": [
+   "12118bdfb36d5229",
+   "368fe0adbec0878b",
+   "1fdb4bb08c4e6dfc",
+   "9b4a04582fff216f"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 41.9,
+  "horario_local": "21:10",
+  "legenda_inicio": "Os calotes do agro e do cartão derrubaram o lucro do Banco do Brasil.\nVocê sente",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-12T07:08:28+00:00"
  }
 ]
