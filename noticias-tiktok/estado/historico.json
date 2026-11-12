@@ -450,5 +450,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-12T18:38:49+00:00"
+ },
+ {
+  "assunto": "STF derruba imunidade em crime patrimonial contra mulheres",
+  "titulo": "STF derruba imunidade em crime patrimonial",
+  "gancho_tela": "Mais proteção para mulheres",
+  "categoria": "brasil",
+  "ids_posts": [
+   "96396ee83391c987",
+   "2b7870d11097fed5"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "normal",
+   "musica": "tensa"
+  },
+  "duracao_s": 32.7,
+  "horario_local": "12:10",
+  "legenda_inicio": "Uma regra de 1940 impedia punir homens por crimes patrimoniais contra mulheres. ",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-12T21:52:21+00:00"
  }
 ]
