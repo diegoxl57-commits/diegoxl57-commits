@@ -472,5 +472,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-12T21:52:21+00:00"
+ },
+ {
+  "assunto": "Senado aprova texto-base do ajuste fiscal e mantém isenção PCD",
+  "titulo": "Senado aprova texto-base do ajuste fiscal",
+  "gancho_tela": "Isenção de carro PCD mantida",
+  "categoria": "economia",
+  "ids_posts": [
+   "3719f3c2f1ffb827",
+   "711ae7d53a1486a4",
+   "8ac1bb6a573999d0",
+   "b0d4aba77f5f50e8",
+   "88b2385f919eb194"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 27.9,
+  "horario_local": "18:40",
+  "legenda_inicio": "O ajuste fiscal passou no Senado, mas a isenção para carros de pessoas com defic",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-13T02:10:39+00:00"
  }
 ]
