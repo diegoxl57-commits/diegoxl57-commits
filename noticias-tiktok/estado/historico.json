@@ -520,5 +520,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-13T06:40:08+00:00"
+ },
+ {
+  "assunto": "Sabre de luz de Darth Vader bate recorde em leilão",
+  "titulo": "Sabre de Darth Vader bate recorde em leilão",
+  "gancho_tela": "Vilão supera o herói",
+  "categoria": "cultura",
+  "ids_posts": [
+   "5a0f700efa44bb38",
+   "274afa09b9d8de17"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "sem"
+  },
+  "duracao_s": 37.8,
+  "horario_local": "07:40",
+  "legenda_inicio": "O sabre de Darth Vader superou o recorde do sabre de Luke Skywalker em leilão.\nV",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-13T18:06:12+00:00"
  }
 ]
