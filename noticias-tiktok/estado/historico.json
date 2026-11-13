@@ -542,5 +542,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-13T18:06:12+00:00"
+ },
+ {
+  "assunto": "Anitta ganha primeiro Grammy Latino após doze indicações",
+  "titulo": "Anitta ganha seu primeiro Grammy Latino",
+  "gancho_tela": "12 indicações até vencer",
+  "categoria": "cultura",
+  "ids_posts": [
+   "cdb9b35ccd4fffc1",
+   "2347a163d5bfc8b1"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 43.5,
+  "horario_local": "12:10",
+  "legenda_inicio": "Foram 12 indicações até Anitta levar o primeiro gramofone de ouro.\nVocê acha que",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-13T21:27:52+00:00"
  }
 ]
