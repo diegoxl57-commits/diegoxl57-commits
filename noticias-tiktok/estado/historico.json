@@ -497,5 +497,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-13T02:10:39+00:00"
+ },
+ {
+  "assunto": "Pane da Microsoft deixa Outlook e Teams instáveis",
+  "titulo": "Pane da Microsoft afeta Outlook e Teams",
+  "gancho_tela": "Microsoft segue com pane",
+  "categoria": "tecnologia",
+  "ids_posts": [
+   "23b1d0e8bca80392",
+   "3ba0839dff83242b",
+   "d32abbbefcb34434"
+  ],
+  "variante": {
+   "gancho": "novidade",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 34.2,
+  "horario_local": "21:10",
+  "legenda_inicio": "A pane que derrubou Outlook e Teams na quinta ainda não foi totalmente resolvida",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-13T06:40:08+00:00"
  }
 ]
