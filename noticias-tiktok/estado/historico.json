@@ -589,5 +589,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-14T01:50:02+00:00"
+ },
+ {
+  "assunto": "Fundador da Nvidia renuncia após escândalo e ações despencam",
+  "titulo": "Fundador da Nvidia renuncia após escândalo",
+  "gancho_tela": "33 anos no comando",
+  "categoria": "tecnologia",
+  "ids_posts": [
+   "fe90869fc1337863",
+   "edaecd52856a81aa",
+   "4458bd24c1b12eed"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 41.0,
+  "horario_local": "21:10",
+  "legenda_inicio": "Depois de 33 anos no comando, o fundador da Nvidia deixou o cargo em meio a um e",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-14T06:17:19+00:00"
  }
 ]
