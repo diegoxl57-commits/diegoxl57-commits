@@ -635,5 +635,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-14T16:46:11+00:00"
+ },
+ {
+  "assunto": "Ronaldinho volta a jogar aos 46 anos pelo Ravenna",
+  "titulo": "Ronaldinho volta a jogar na Itália aos 46",
+  "gancho_tela": "Ronaldinho volta aos 46?",
+  "categoria": "esportes",
+  "ids_posts": [
+   "2f1e8b58f52a4d7f",
+   "6212c2ccd53c502c",
+   "c463ac36bad960c9"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "tensa"
+  },
+  "duracao_s": 28.2,
+  "horario_local": "12:10",
+  "legenda_inicio": "Onze anos depois de se aposentar, Ronaldinho volta a campo como titular na Itáli",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-14T19:57:20+00:00"
  }
 ]
