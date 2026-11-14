@@ -564,5 +564,30 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-13T21:27:52+00:00"
+ },
+ {
+  "assunto": "EUA suspendem decolagens por quatro horas após falha de comunicação",
+  "titulo": "Falha suspende decolagens em todos os EUA",
+  "gancho_tela": "Vai viajar para os EUA?",
+  "categoria": "mundo",
+  "ids_posts": [
+   "238b6ceac52a96dd",
+   "e79cd1a8788fde27",
+   "b64bc11ab9712a0c",
+   "7d97d0df64feb592",
+   "4022810097930c37"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "tensa"
+  },
+  "duracao_s": 38.6,
+  "horario_local": "18:40",
+  "legenda_inicio": "Uma falha de comunicação deixou os aviões no chão em todos os Estados Unidos por",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-14T01:50:02+00:00"
  }
 ]
