@@ -612,5 +612,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-14T06:17:19+00:00"
+ },
+ {
+  "assunto": "Itália multa Meta por acessar fotos de usuários Android",
+  "titulo": "Itália multa Meta em R$ 5 bilhões",
+  "gancho_tela": "Multa de R$ 5 bilhões",
+  "categoria": "tecnologia",
+  "ids_posts": [
+   "3e8c66884da38bd9",
+   "21d83d389f6e9844",
+   "9229d221c62bd6a7"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "sem"
+  },
+  "duracao_s": 40.8,
+  "horario_local": "07:40",
+  "legenda_inicio": "A Itália multou a Meta em cerca de R$ 5 bilhões por acessar fotos e vídeos de us",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-14T16:46:11+00:00"
  }
 ]
