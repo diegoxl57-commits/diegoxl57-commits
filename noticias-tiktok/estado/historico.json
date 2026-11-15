@@ -727,5 +727,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-15T17:26:39+00:00"
+ },
+ {
+  "assunto": "Prazo final para reembolso de multas do free flow em SP",
+  "titulo": "Reembolso de multa do free flow acaba amanhã",
+  "gancho_tela": "Multa de pedágio: prazo acaba",
+  "categoria": "brasil",
+  "ids_posts": [
+   "2c23cfb042d118f9",
+   "21e8036d9f8283d9"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "curto",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 31.5,
+  "horario_local": "12:10",
+  "legenda_inicio": "Só 1,16% dos motoristas com direito ao reembolso de multas do free flow em SP re",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-15T20:24:58+00:00"
  }
 ]
