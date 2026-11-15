@@ -705,5 +705,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-15T06:24:49+00:00"
+ },
+ {
+  "assunto": "Quem tem direito ao cashback da reforma tributária",
+  "titulo": "Cashback da reforma: quem tem direito",
+  "gancho_tela": "Quem recebe o cashback?",
+  "categoria": "economia",
+  "ids_posts": [
+   "c98ae273e4bd969f",
+   "6f816e293dfc8e81"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "tensa"
+  },
+  "duracao_s": 39.0,
+  "horario_local": "07:40",
+  "legenda_inicio": "A reforma tributária vai devolver parte dos impostos a cerca de 70 milhões de br",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-15T17:26:39+00:00"
  }
 ]
