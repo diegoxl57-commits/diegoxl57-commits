@@ -658,5 +658,29 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-14T19:57:20+00:00"
+ },
+ {
+  "assunto": "Starship faz pouso inédito capturada por torre após 22 horas",
+  "titulo": "Starship tem pouso inédito após 22 horas",
+  "gancho_tela": "Nave capturada por torre",
+  "categoria": "ciencia",
+  "ids_posts": [
+   "4c5e1d8ed4267b1b",
+   "e28a7cc33bdb8781",
+   "23a87fa2a94c17df",
+   "e9632d581252a60b"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 43.1,
+  "horario_local": "18:40",
+  "legenda_inicio": "A Starship passou mais de 22 horas no espaço e, na volta, foi segurada pelos bra",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-15T01:21:02+00:00"
  }
 ]
