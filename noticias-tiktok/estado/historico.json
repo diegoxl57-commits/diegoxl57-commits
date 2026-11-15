@@ -682,5 +682,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-15T01:21:02+00:00"
+ },
+ {
+  "assunto": "Alerta de tempestades no Brasil, com foco em MG e SP",
+  "titulo": "Alerta de tempestades em todo o Brasil",
+  "gancho_tela": "Alerta de tempestade no domingo",
+  "categoria": "clima",
+  "ids_posts": [
+   "8d01f3f889942a9c",
+   "454691e2eb8ccbc2",
+   "485140b2cb5e8c72"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "pulsante"
+  },
+  "duracao_s": 39.6,
+  "horario_local": "21:10",
+  "legenda_inicio": "Mais de 800 cidades mineiras estão sob aviso amarelo, e uma zona de baixa pressã",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-15T06:24:49+00:00"
  }
 ]
