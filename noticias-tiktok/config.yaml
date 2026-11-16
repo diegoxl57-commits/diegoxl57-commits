@@ -114,16 +114,21 @@ aprendizado:
 #                            e você publica com um toque; a legenda chega no GitHub)
 #         "tiktok"          (API oficial direta; fica PRIVADO até o app passar na auditoria)
 #         "uploadpost"      (serviço pago; publica público sem nenhum toque)
+#         "zernio"          (grátis até 2 contas; publica público sem nenhum toque,
+#                            com o selo de IA; exige o secret ZERNIO_API_KEY)
 # O envio só acontece com a variável PUBLICAR=true no GitHub.
 # ---------------------------------------------------------------------------
 publicacao:
-  metodo: "tiktok_rascunho"
+  metodo: "zernio"
   avisar_no_github: true   # comenta a legenda pronta numa issue do repositório (notifica o app do GitHub)
   marcar_como_ia: true     # rótulo "gerado por IA" do TikTok (exigido para conteúdo sintético)
   permitir_comentarios: true
   uploadpost:
     perfil: "noticias"     # nome do perfil criado no painel do Upload-Post
     campos_extras: {}      # campos adicionais aceitos pela API do Upload-Post, se precisar
+  zernio:
+    conta: ""              # id da conta do TikTok no Zernio; vazio = usa a única conta do TikTok conectada
+    privacidade: "PUBLIC_TO_EVERYONE"
 
 # Leitura dos números (visualizações, curtidas, comentários, compartilhamentos)
 # pela API oficial do TikTok, escopo "video.list". Funciona com qualquer método de
