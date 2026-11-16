@@ -749,5 +749,29 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-15T20:24:58+00:00"
+ },
+ {
+  "assunto": "Abstenção de 36% no segundo dia do Enem 2026",
+  "titulo": "Enem 2026: 36% faltaram no 2º dia",
+  "gancho_tela": "36% faltaram ao Enem",
+  "categoria": "brasil",
+  "ids_posts": [
+   "d2db4415dbc70fb4",
+   "c87aff243ecb8281",
+   "bc865643f384d32f",
+   "2a19b52fd943879f"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "tensa"
+  },
+  "duracao_s": 40.7,
+  "horario_local": "18:40",
+  "legenda_inicio": "Mais de um terço dos inscritos não apareceu no segundo dia do Enem 2026.\nVocê ou",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-16T01:26:53+00:00"
  }
 ]
