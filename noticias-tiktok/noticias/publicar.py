@@ -55,6 +55,11 @@ def _conta_tiktok_zernio(api_key: str, conta: str) -> str:
     return contas[0]["_id"]
 
 
+def _id_video(valor) -> str | None:
+    texto = str(valor or "").strip()
+    return texto if texto.isdigit() else None
+
+
 def _alvo_tiktok(post: dict) -> dict:
     return next((p for p in post.get("platforms", []) if p.get("platform") == "tiktok"), {})
 
@@ -103,7 +108,8 @@ def via_zernio(cfg: dict, video: Path, legenda: str, api_key: str) -> dict:
     if alvo.get("status") == "failed" or post.get("status") == "failed":
         raise ErroPublicacao(f"Zernio não publicou no TikTok: {alvo.get('errorMessage') or resposta}")
     return {"metodo": "zernio", "post_id": post.get("_id"), "status": alvo.get("status") or post.get("status"),
-            "video_id": alvo.get("platformPostId") or None, "url": alvo.get("platformPostUrl"),
+            # só aceita id numérico do TikTok; "v_pub_url~..." é o id do envio e confundiria as métricas
+            "video_id": _id_video(alvo.get("platformPostId")), "url": alvo.get("platformPostUrl"),
             "avisos": resposta.get("warnings")}
 
 
