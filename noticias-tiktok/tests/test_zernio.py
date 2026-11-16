@@ -77,6 +77,13 @@ def test_publica_publico_com_selo_de_ia(zernio):
                  "url": "https://www.tiktok.com/@diego/video/7300", "avisos": None}
 
 
+def test_id_do_envio_nao_vira_video_id():
+    # o Zernio devolveu "v_pub_url~v2..." no teste real: é o id do envio, não o do vídeo
+    assert publicar._id_video("v_pub_url~v2.7708919934420420614") is None
+    assert publicar._id_video("7708920300351524103") == "7708920300351524103"
+    assert publicar._id_video(None) is None
+
+
 def test_usa_a_conta_do_config_sem_listar(zernio):
     chamadas, video = zernio
     publicar.via_zernio(cfg_zernio(conta="conta-escolhida"), video, "x", "k")
