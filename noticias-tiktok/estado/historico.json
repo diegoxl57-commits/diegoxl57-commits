@@ -819,5 +819,28 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-16T20:42:48+00:00"
+ },
+ {
+  "assunto": "Anitta indicada ao Grammy de Melhor Álbum Global",
+  "titulo": "Anitta é indicada ao Grammy com Equilibrivm",
+  "gancho_tela": "Do Grammy Latino ao Grammy",
+  "categoria": "cultura",
+  "ids_posts": [
+   "04c77859a3c414a7",
+   "92c269697419cea6",
+   "9bdbf98e7e81a4cc"
+  ],
+  "variante": {
+   "gancho": "contraste",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 31.5,
+  "horario_local": "20:48",
+  "legenda_inicio": "O mesmo álbum de Anitta venceu o Grammy Latino e, três dias depois, entrou na di",
+  "video_id": "7708920300351524103",
+  "publicado": true,
+  "quando": "2026-11-16T23:48:03+00:00"
  }
 ]

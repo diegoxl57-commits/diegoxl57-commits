@@ -8,6 +8,7 @@ from . import tiktok_api
 from .config import segredo
 
 URL_UPLOADPOST = "https://api.upload-post.com/api/upload"
+URL_ZERNIO = "https://zernio.com/api/v1"
 
 
 class ErroPublicacao(RuntimeError):
@@ -16,6 +17,8 @@ class ErroPublicacao(RuntimeError):
 
 def publicar(cfg: dict, video: Path, legenda: str) -> dict:
     metodo = cfg["publicacao"].get("metodo", "uploadpost")
+    if metodo == "zernio":
+        return via_zernio(cfg, video, legenda, segredo("ZERNIO_API_KEY"))
     if metodo == "uploadpost":
         return via_uploadpost(cfg, video, legenda, segredo("UPLOADPOST_API_KEY"))
     if metodo == "tiktok":
@@ -23,6 +26,91 @@ def publicar(cfg: dict, video: Path, legenda: str) -> dict:
     if metodo == "tiktok_rascunho":
         return via_tiktok_rascunho(video)
     raise ErroPublicacao(f"Método de publicação desconhecido: {metodo}")
+
+
+# ---------------------------------------------------------------- Zernio
+# Publicação direta e pública pelo app do Zernio, já aprovado pelo TikTok (grátis até 2 contas).
+def _zernio(metodo: str, caminho: str, api_key: str, timeout: int = 120, **kw) -> dict:
+    resp = requests.request(metodo, URL_ZERNIO + caminho, timeout=timeout,
+                            headers={"Authorization": f"Bearer {api_key}"}, **kw)
+    if resp.status_code >= 400:
+        raise ErroPublicacao(f"Zernio respondeu {resp.status_code} em {caminho}: {resp.text[:500]}")
+    try:
+        return resp.json()
+    except ValueError:
+        return {}
+
+
+def _conta_tiktok_zernio(api_key: str, conta: str) -> str:
+    """Id da conta do TikTok no Zernio: a do config.yaml ou a única conectada."""
+    if conta:
+        return conta
+    contas = [c for c in _zernio("GET", "/accounts", api_key, params={"platform": "tiktok"}).get("accounts", [])
+              if c.get("platform") == "tiktok" and c.get("isActive", True)]
+    if not contas:
+        raise ErroPublicacao("Nenhuma conta do TikTok conectada no Zernio.")
+    if len(contas) > 1:
+        print(f"[zernio] {len(contas)} contas do TikTok conectadas; usando {contas[0].get('username')}. "
+              "Para escolher outra, preencha publicacao.zernio.conta no config.yaml.")
+    return contas[0]["_id"]
+
+
+def _id_video(valor) -> str | None:
+    texto = str(valor or "").strip()
+    return texto if texto.isdigit() else None
+
+
+def _alvo_tiktok(post: dict) -> dict:
+    return next((p for p in post.get("platforms", []) if p.get("platform") == "tiktok"), {})
+
+
+def via_zernio(cfg: dict, video: Path, legenda: str, api_key: str) -> dict:
+    pub = cfg["publicacao"]
+    zc = pub.get("zernio") or {}
+
+    # 1. envia o arquivo para o armazenamento do Zernio
+    pre = _zernio("POST", "/media/presign", api_key,
+                  json={"filename": video.name, "contentType": "video/mp4", "size": video.stat().st_size})
+    with open(video, "rb") as f:
+        envio = requests.put(pre["uploadUrl"], data=f, headers={"Content-Type": "video/mp4"}, timeout=900)
+    if envio.status_code >= 400:
+        raise ErroPublicacao(f"Falha ao enviar o vídeo ao Zernio: {envio.status_code} {envio.text[:300]}")
+
+    # 2. publica na hora, público, com o selo de conteúdo gerado por IA
+    corpo = {
+        "content": legenda[:2200],
+        "mediaItems": [{"type": "video", "url": pre["publicUrl"]}],
+        "platforms": [{"platform": "tiktok", "accountId": _conta_tiktok_zernio(api_key, zc.get("conta", ""))}],
+        "publishNow": True,
+        "tiktokSettings": {
+            "privacyLevel": zc.get("privacidade", "PUBLIC_TO_EVERYONE"),
+            "allowComment": bool(pub.get("permitir_comentarios", True)),
+            "allowDuet": True,
+            "allowStitch": True,
+            "videoMadeWithAi": bool(pub.get("marcar_como_ia", True)),
+            "videoCoverTimestampMs": 400,  # capa com o gancho na tela
+            # o dono da conta ligou a publicação automática (publicacao.metodo: zernio)
+            "contentPreviewConfirmed": True,
+            "expressConsentGiven": True,
+        },
+    }
+    resposta = _zernio("POST", "/posts", api_key, json=corpo, timeout=900)
+    post = resposta.get("post") or {}
+    alvo = _alvo_tiktok(post)
+
+    # 3. o TikTok processa o vídeo por alguns minutos; acompanha até publicar ou falhar
+    for _ in range(30):
+        if alvo.get("status") in ("published", "failed") or not post.get("_id"):
+            break
+        time.sleep(10)
+        post = _zernio("GET", f"/posts/{post['_id']}", api_key).get("post") or post
+        alvo = _alvo_tiktok(post)
+    if alvo.get("status") == "failed" or post.get("status") == "failed":
+        raise ErroPublicacao(f"Zernio não publicou no TikTok: {alvo.get('errorMessage') or resposta}")
+    return {"metodo": "zernio", "post_id": post.get("_id"), "status": alvo.get("status") or post.get("status"),
+            # só aceita id numérico do TikTok; "v_pub_url~..." é o id do envio e confundiria as métricas
+            "video_id": _id_video(alvo.get("platformPostId")), "url": alvo.get("platformPostUrl"),
+            "avisos": resposta.get("warnings")}
 
 
 # ---------------------------------------------------------------- Upload-Post

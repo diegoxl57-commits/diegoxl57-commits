@@ -35,8 +35,8 @@ def chaves_faltando(cfg: dict) -> list[str]:
         precisa.append("X_BEARER_TOKEN")
     if os.environ.get("PUBLICAR", "").lower() == "true":
         metodo = cfg["publicacao"].get("metodo", "tiktok_rascunho")
-        precisa += (["UPLOADPOST_API_KEY"] if metodo == "uploadpost"
-                    else ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"])
+        precisa += {"uploadpost": ["UPLOADPOST_API_KEY"], "zernio": ["ZERNIO_API_KEY"]}.get(
+            metodo, ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"])
     return [n for n in precisa if not os.environ.get(n, "").strip()]
 
 
