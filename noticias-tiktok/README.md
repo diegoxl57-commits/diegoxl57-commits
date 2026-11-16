@@ -1,6 +1,6 @@
 # Robô de notícias para o TikTok
 
-Quatro vezes por dia, o robô:
+Duas vezes por dia, o robô:
 
 1. **Mede o que já foi ao ar**: lê no TikTok as visualizações, curtidas, comentários e compartilhamentos dos vídeos anteriores.
 2. **Escolhe o formato da rodada** (gancho, duração, ritmo e trilha), priorizando o que deu mais resultado.
@@ -93,7 +93,7 @@ Teste em **Actions → Notícias TikTok → Run workflow → modo `teste`**. O v
 
 ## Horários
 
-07:40, 12:10, 18:40 e 21:10 (Brasília). Para mudar, edite as linhas `cron` em `.github/workflows/noticias-tiktok.yml`. Elas ficam em UTC, que é Brasília + 3 horas.
+06:40 e 18:40 (Brasília), para o rascunho chegar por volta das 7h e das 19h. Para mudar, edite as linhas `cron` em `.github/workflows/noticias-tiktok.yml`. Elas ficam em UTC, que é Brasília + 3 horas.
 
 ## O formato viral
 
