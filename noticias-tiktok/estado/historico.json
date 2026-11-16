@@ -773,5 +773,27 @@
   "video_id": null,
   "publicado": true,
   "quando": "2026-11-16T01:26:53+00:00"
+ },
+ {
+  "assunto": "Adesão a consórcios cresce com juros altos; modalidade pode sair cara",
+  "titulo": "Consórcio cresce, mas pode sair caro",
+  "gancho_tela": "Consórcio sem juros pode sair caro",
+  "categoria": "economia",
+  "ids_posts": [
+   "fa7b43ffd2742c52",
+   "29d4cd6d4a93c4fc"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "pulsante"
+  },
+  "duracao_s": 39.6,
+  "horario_local": "21:10",
+  "legenda_inicio": "O consórcio 'sem juros' está em alta, mas especialistas alertam que ele pode sai",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-16T06:23:52+00:00"
  }
 ]
