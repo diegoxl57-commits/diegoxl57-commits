@@ -310,8 +310,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 143.5,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 144.1,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   },
   "pontuacao": 1.183
  },
@@ -343,8 +343,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 143.5,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 144.1,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   },
   "pontuacao": 1.174
  },
@@ -630,8 +630,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 60.6,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   },
   "pontuacao": 0.85
  },
@@ -665,8 +665,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 60.6,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   },
   "pontuacao": 1.261
  },
@@ -698,8 +698,8 @@
    "curtidas": 6,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 60.6,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   },
   "pontuacao": 2.622
  },
@@ -934,12 +934,12 @@
   "quando": "2026-11-16T23:48:03+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708920300351524103?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 8,
+   "visualizacoes": 17,
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 0.4,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 0.9,
+   "coletado_em": "2026-11-17T00:42:06+00:00"
   }
  },
  {
@@ -963,5 +963,27 @@
   "video_id": null,
   "publicado": false,
   "quando": "2026-11-17T00:11:32+00:00"
+ },
+ {
+  "assunto": "Robert Pattinson é confirmado como novo James Bond",
+  "titulo": "Robert Pattinson é o novo James Bond",
+  "gancho_tela": "Quem é o novo 007?",
+  "categoria": "cultura",
+  "ids_posts": [
+   "e96c27ccf667f555",
+   "6618e121ecde3324"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 33.6,
+  "horario_local": "21:43",
+  "legenda_inicio": "Segundo a BBC News Brasil, o astro de Crepúsculo será o sétimo ator a viver o ag",
+  "video_id": null,
+  "publicado": false,
+  "quando": "2026-11-17T00:43:36+00:00"
  }
 ]
