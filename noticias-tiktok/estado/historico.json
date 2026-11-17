@@ -310,8 +310,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 143.5,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 147.5,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   },
   "pontuacao": 1.183
  },
@@ -343,8 +343,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 143.5,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 147.5,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   },
   "pontuacao": 1.174
  },
@@ -630,8 +630,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 64.1,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   },
   "pontuacao": 0.85
  },
@@ -665,8 +665,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 64.1,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   },
   "pontuacao": 1.261
  },
@@ -698,8 +698,8 @@
    "curtidas": 6,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 60.1,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 64.1,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   },
   "pontuacao": 2.622
  },
@@ -934,12 +934,12 @@
   "quando": "2026-11-16T23:48:03+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708920300351524103?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 8,
-   "curtidas": 0,
+   "visualizacoes": 48,
+   "curtidas": 3,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 0.4,
-   "coletado_em": "2026-11-17T00:09:48+00:00"
+   "horas_no_ar": 4.4,
+   "coletado_em": "2026-11-17T04:11:22+00:00"
   }
  },
  {
@@ -963,5 +963,27 @@
   "video_id": null,
   "publicado": false,
   "quando": "2026-11-17T00:11:32+00:00"
+ },
+ {
+  "assunto": "Projeto de lei propõe férias de 30 dias úteis",
+  "titulo": "Projeto quer férias de 30 dias úteis",
+  "gancho_tela": "Férias de seis semanas?",
+  "categoria": "brasil",
+  "ids_posts": [
+   "575c5df334da1f92",
+   "1cddf9730f3422b5"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 31.1,
+  "horario_local": "18:40",
+  "legenda_inicio": "Um projeto de lei quer tirar sábados, domingos e feriados da contagem das férias",
+  "video_id": null,
+  "publicado": true,
+  "quando": "2026-11-17T04:12:46+00:00"
  }
 ]
