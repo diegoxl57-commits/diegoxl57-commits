@@ -111,12 +111,12 @@ def test_ids_curtos_sao_traduzidos_para_os_ids_reais(monkeypatch):
 
     from noticias.config import carregar
 
-    enviado = {}
+    chamadas = []  # 1ª chamada: escolha da pauta; 2ª: checagem dos fatos
     resposta_modelo = dict(PAUTA, ids_posts_usados=["n1", "n2", "n3"])  # n1..n3 = cnn1, uol1, met1
 
     class Mensagens:
         def create(self, **kw):
-            enviado.update(json.loads(kw["messages"][0]["content"]))
+            chamadas.append(json.loads(kw["messages"][0]["content"]))
             return SimpleNamespace(stop_reason="end_turn",
                                    content=[SimpleNamespace(type="text", text=json.dumps(resposta_modelo))],
                                    usage=SimpleNamespace(input_tokens=1, output_tokens=1))
@@ -125,5 +125,5 @@ def test_ids_curtos_sao_traduzidos_para_os_ids_reais(monkeypatch):
     cfg = carregar()
     variante = {"duracao": next(iter(cfg["variantes"]["duracao"])), "gancho": next(iter(cfg["variantes"]["gancho"]))}
     p = editor.escolher_pauta(cfg, POSTS, [], variante, "")
-    assert [x["id"] for x in enviado["posts"]] == [f"n{i}" for i in range(1, len(POSTS) + 1)]
+    assert [x["id"] for x in chamadas[0]["posts"]] == [f"n{i}" for i in range(1, len(POSTS) + 1)]
     assert p["ids_posts_usados"] == ["cnn1", "uol1", "met1"]
