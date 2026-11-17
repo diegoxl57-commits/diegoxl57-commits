@@ -27,9 +27,9 @@ def atualizar(historico: list[dict], cfg: dict) -> str:
     except tiktok_api.ErroTikTok as e:
         return f"Não consegui ler as métricas: {e}"
 
-    # no modo rascunho você publica quando puder; o vídeo pode entrar horas depois de gerado
-    rascunho = cfg.get("publicacao", {}).get("metodo") == "tiktok_rascunho"
-    janela_h = float(m.get("horas_para_publicar", 48)) if rascunho else 6.0
+    # o vídeo pode entrar no ar horas depois de gerado (rascunho publicado à mão); a janela
+    # vale para qualquer método, para não perder registros antigos quando o método muda
+    janela_h = float(m.get("horas_para_publicar", 48))
     atualizados = 0
     for h in alvos:
         v = _encontrar(h, videos, janela_h)
