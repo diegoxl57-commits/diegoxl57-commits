@@ -343,8 +343,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 147.5,
-   "coletado_em": "2026-11-17T04:11:22+00:00"
+   "horas_no_ar": 162.1,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
   },
   "pontuacao": 1.174
  },
@@ -630,8 +630,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 64.1,
-   "coletado_em": "2026-11-17T04:11:22+00:00"
+   "horas_no_ar": 78.7,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
   },
   "pontuacao": 0.85
  },
@@ -665,8 +665,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 64.1,
-   "coletado_em": "2026-11-17T04:11:22+00:00"
+   "horas_no_ar": 78.7,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
   },
   "pontuacao": 1.261
  },
@@ -698,8 +698,8 @@
    "curtidas": 6,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 64.1,
-   "coletado_em": "2026-11-17T04:11:22+00:00"
+   "horas_no_ar": 78.7,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
   },
   "pontuacao": 2.622
  },
@@ -934,12 +934,12 @@
   "quando": "2026-11-16T23:48:03+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708920300351524103?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 48,
-   "curtidas": 3,
+   "visualizacoes": 186,
+   "curtidas": 16,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 4.4,
-   "coletado_em": "2026-11-17T04:11:22+00:00"
+   "horas_no_ar": 19.0,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
   }
  },
  {
@@ -982,8 +982,40 @@
   "duracao_s": 31.1,
   "horario_local": "18:40",
   "legenda_inicio": "Um projeto de lei quer tirar sábados, domingos e feriados da contagem das férias",
+  "video_id": "7708988508744076565",
+  "publicado": true,
+  "quando": "2026-11-17T04:12:46+00:00",
+  "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708988508744076565?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
+  "metricas": {
+   "visualizacoes": 30,
+   "curtidas": 0,
+   "comentarios": 0,
+   "compartilhamentos": 0,
+   "horas_no_ar": 14.5,
+   "coletado_em": "2026-11-17T18:45:11+00:00"
+  }
+ },
+ {
+  "assunto": "GTA 6 lidera indicações ao Game Awards 2026",
+  "titulo": "GTA 6 lidera indicações no Game Awards",
+  "gancho_tela": "Indicado antes de lançar?",
+  "categoria": "tecnologia",
+  "ids_posts": [
+   "6fa01c1e374f6c5b",
+   "b8b53764a1900e07",
+   "33131534a31611f2"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 27.9,
+  "horario_local": "06:40",
+  "legenda_inicio": "GTA 6 ainda nem foi lançado e já lidera as indicações do Game Awards.\nPara você,",
   "video_id": null,
   "publicado": true,
-  "quando": "2026-11-17T04:12:46+00:00"
+  "quando": "2026-11-17T18:46:39+00:00"
  }
 ]
