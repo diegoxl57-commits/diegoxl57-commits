@@ -131,6 +131,8 @@ pip install pytest && python -m pytest tests -q   # testes da conferência de fo
 
 O Claude escolhe a notícia e diz quais posts a confirmam, mas o robô confere no código antes de usar: cada post precisa ter palavras-chave em comum com o assunto (palavras raras no dia, como nomes próprios, valem mais). Se o post de um veículo não bater, o robô procura no mesmo veículo a matéria certa; se não achar, tira o veículo da lista. Se sobrarem menos veículos que `minimo_fontes`, a rodada não gera vídeo. As fontes da legenda e do vídeo saem sempre dessa lista conferida, e o resumo da rodada mostra o que foi corrigido.
 
+Depois disso vem a **checagem dos fatos**: o Claude relê o gancho, o roteiro, o título e a legenda tendo em mãos só os posts dessa lista. O que eles não confirmam sai do texto, e o dado que só um veículo deu ganha atribuição ("segundo o g1..."). Isso evita que um detalhe de outra matéria do dia entre no vídeo sem fonte. O resumo da rodada lista o que foi ajustado. Se o roteiro ficar curto demais depois dos cortes, a rodada não gera vídeo. A checagem é uma segunda chamada ao Claude, com poucas notícias, e custa poucos centavos de dólar por vídeo.
+
 ## Cuidados
 
 - **Responsabilidade**: confira cada notícia antes de publicar. O modo rascunho existe para isso.
