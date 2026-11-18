@@ -60,7 +60,7 @@
    "horas_no_ar": 197.2,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.535
+  "pontuacao": 0.507
  },
  {
   "assunto": "Chuvas em SP: emergência em Sorocaba e mortes no ano",
@@ -118,7 +118,7 @@
    "horas_no_ar": 193.1,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 1.438
+  "pontuacao": 1.309
  },
  {
   "assunto": "Abstenção de 32% no 1º dia do Enem 2026",
@@ -199,7 +199,7 @@
    "horas_no_ar": 167.0,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.374
+  "pontuacao": 0.355
  },
  {
   "assunto": "Justiça suspende novas regras do governo para VR e VA",
@@ -234,7 +234,7 @@
    "horas_no_ar": 167.0,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.529
+  "pontuacao": 0.501
  },
  {
   "assunto": "Fachin arquiva inquérito das fake news após mais de sete anos",
@@ -313,7 +313,7 @@
    "horas_no_ar": 147.5,
    "coletado_em": "2026-11-17T04:11:22+00:00"
   },
-  "pontuacao": 1.183
+  "pontuacao": 1.083
  },
  {
   "assunto": "Dólar fecha no maior valor do ano após inflação nos EUA",
@@ -346,7 +346,7 @@
    "horas_no_ar": 162.1,
    "coletado_em": "2026-11-17T18:45:11+00:00"
   },
-  "pontuacao": 1.174
+  "pontuacao": 1.07
  },
  {
   "assunto": "Ata do Copom indica juros altos por mais tempo",
@@ -630,10 +630,10 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 78.7,
-   "coletado_em": "2026-11-17T18:45:11+00:00"
+   "horas_no_ar": 87.1,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
   },
-  "pontuacao": 0.85
+  "pontuacao": 0.781
  },
  {
   "assunto": "EUA suspendem decolagens por quatro horas após falha de comunicação",
@@ -665,10 +665,10 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 78.7,
-   "coletado_em": "2026-11-17T18:45:11+00:00"
+   "horas_no_ar": 87.1,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
   },
-  "pontuacao": 1.261
+  "pontuacao": 1.166
  },
  {
   "assunto": "Fundador da Nvidia renuncia após escândalo e ações despencam",
@@ -694,14 +694,14 @@
   "quando": "2026-11-14T06:17:19+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7707996794554207494?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 360,
-   "curtidas": 6,
+   "visualizacoes": 393,
+   "curtidas": 7,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 78.7,
-   "coletado_em": "2026-11-17T18:45:11+00:00"
+   "horas_no_ar": 87.1,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
   },
-  "pontuacao": 2.622
+  "pontuacao": 2.665
  },
  {
   "assunto": "Itália multa Meta por acessar fotos de usuários Android",
@@ -934,13 +934,14 @@
   "quando": "2026-11-16T23:48:03+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708920300351524103?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 186,
-   "curtidas": 16,
+   "visualizacoes": 397,
+   "curtidas": 26,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 19.0,
-   "coletado_em": "2026-11-17T18:45:11+00:00"
-  }
+   "horas_no_ar": 27.3,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
+  },
+  "pontuacao": 3.894
  },
  {
   "assunto": "Fazenda estima economia de até R$ 50,6 bi com regulação de big techs",
@@ -987,12 +988,12 @@
   "quando": "2026-11-17T04:12:46+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708988508744076565?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 30,
+   "visualizacoes": 82,
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 14.5,
-   "coletado_em": "2026-11-17T18:45:11+00:00"
+   "horas_no_ar": 22.9,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
   }
  },
  {
@@ -1014,8 +1015,40 @@
   "duracao_s": 27.9,
   "horario_local": "06:40",
   "legenda_inicio": "GTA 6 ainda nem foi lançado e já lidera as indicações do Game Awards.\nPara você,",
+  "video_id": "7709213715639307538",
+  "publicado": true,
+  "quando": "2026-11-17T18:46:39+00:00",
+  "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709213715639307538?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
+  "metricas": {
+   "visualizacoes": 91,
+   "curtidas": 0,
+   "comentarios": 0,
+   "compartilhamentos": 0,
+   "horas_no_ar": 8.4,
+   "coletado_em": "2026-11-18T03:08:54+00:00"
+  }
+ },
+ {
+  "assunto": "Custo Brasil chega a R$ 3,5 trilhões por ano",
+  "titulo": "Custo Brasil chega a R$ 3,5 trilhões ao ano",
+  "gancho_tela": "R$ 3,5 trilhões por ano",
+  "categoria": "economia",
+  "ids_posts": [
+   "a5abaf385f9a0e4d",
+   "faf0b7b544f6f00a",
+   "f7d251ef0521904c"
+  ],
+  "variante": {
+   "gancho": "pergunta",
+   "duracao": "curto",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 30.3,
+  "horario_local": "18:40",
+  "legenda_inicio": "O custo Brasil equivale a mais de um quarto do PIB, segundo estudo do MBC.\nVocê ",
   "video_id": null,
   "publicado": true,
-  "quando": "2026-11-17T18:46:39+00:00"
+  "quando": "2026-11-18T03:10:37+00:00"
  }
 ]
