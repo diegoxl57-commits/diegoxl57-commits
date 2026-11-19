@@ -60,7 +60,7 @@
    "horas_no_ar": 197.2,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.535
+  "pontuacao": 0.537
  },
  {
   "assunto": "Chuvas em SP: emergência em Sorocaba e mortes no ano",
@@ -118,7 +118,7 @@
    "horas_no_ar": 193.1,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 1.438
+  "pontuacao": 1.508
  },
  {
   "assunto": "Abstenção de 32% no 1º dia do Enem 2026",
@@ -199,7 +199,7 @@
    "horas_no_ar": 167.0,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.374
+  "pontuacao": 0.376
  },
  {
   "assunto": "Justiça suspende novas regras do governo para VR e VA",
@@ -234,7 +234,7 @@
    "horas_no_ar": 167.0,
    "coletado_em": "2026-11-17T00:04:49+00:00"
   },
-  "pontuacao": 0.529
+  "pontuacao": 0.531
  },
  {
   "assunto": "Fachin arquiva inquérito das fake news após mais de sete anos",
@@ -313,7 +313,7 @@
    "horas_no_ar": 147.5,
    "coletado_em": "2026-11-17T04:11:22+00:00"
   },
-  "pontuacao": 1.183
+  "pontuacao": 1.234
  },
  {
   "assunto": "Dólar fecha no maior valor do ano após inflação nos EUA",
@@ -346,7 +346,7 @@
    "horas_no_ar": 162.1,
    "coletado_em": "2026-11-17T18:45:11+00:00"
   },
-  "pontuacao": 1.174
+  "pontuacao": 1.229
  },
  {
   "assunto": "Ata do Copom indica juros altos por mais tempo",
@@ -630,10 +630,10 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 102.3,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 110.7,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   },
-  "pontuacao": 0.85
+  "pontuacao": 0.883
  },
  {
   "assunto": "EUA suspendem decolagens por quatro horas após falha de comunicação",
@@ -665,10 +665,10 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 102.3,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 110.7,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   },
-  "pontuacao": 1.261
+  "pontuacao": 1.302
  },
  {
   "assunto": "Fundador da Nvidia renuncia após escândalo e ações despencam",
@@ -698,10 +698,10 @@
    "curtidas": 7,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 102.3,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 110.8,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   },
-  "pontuacao": 2.851
+  "pontuacao": 2.91
  },
  {
   "assunto": "Itália multa Meta por acessar fotos de usuários Android",
@@ -934,14 +934,14 @@
   "quando": "2026-11-16T23:48:03+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7708920300351524103?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 398,
-   "curtidas": 26,
+   "visualizacoes": 504,
+   "curtidas": 33,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 42.6,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 51.0,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   },
-  "pontuacao": 4.259
+  "pontuacao": 5.08
  },
  {
   "assunto": "Fazenda estima economia de até R$ 50,6 bi com regulação de big techs",
@@ -992,10 +992,10 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 38.2,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 46.6,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   },
-  "pontuacao": 0.493
+  "pontuacao": 0.496
  },
  {
   "assunto": "GTA 6 lidera indicações ao Game Awards 2026",
@@ -1021,13 +1021,14 @@
   "quando": "2026-11-17T18:46:39+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709213715639307538?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 99,
+   "visualizacoes": 100,
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 23.6,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
-  }
+   "horas_no_ar": 32.0,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
+  },
+  "pontuacao": 0.597
  },
  {
   "assunto": "Custo Brasil chega a R$ 3,5 trilhões por ano",
@@ -1053,12 +1054,12 @@
   "quando": "2026-11-18T03:10:37+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709343514303155476?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 44,
+   "visualizacoes": 50,
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 15.2,
-   "coletado_em": "2026-11-18T18:22:43+00:00"
+   "horas_no_ar": 23.7,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
   }
  },
  {
@@ -1079,8 +1080,40 @@
   "duracao_s": 43.2,
   "horario_local": "06:40",
   "legenda_inicio": "Grupo investigado movimentou cerca de R$ 11 bilhões, mas declarou só R$ 2 bilhõe",
+  "video_id": "7709579179687267605",
+  "publicado": true,
+  "quando": "2026-11-18T18:24:58+00:00",
+  "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709579179687267605?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
+  "metricas": {
+   "visualizacoes": 23,
+   "curtidas": 0,
+   "comentarios": 0,
+   "compartilhamentos": 0,
+   "horas_no_ar": 8.4,
+   "coletado_em": "2026-11-19T02:49:29+00:00"
+  }
+ },
+ {
+  "assunto": "Chuva forte causa alagamentos e altera voos em São Paulo",
+  "titulo": "Chuva causa alagamentos e altera voos em SP",
+  "gancho_tela": "Chuva forte em São Paulo",
+  "categoria": "clima",
+  "ids_posts": [
+   "77b16eb215f3360a",
+   "49e482320e9f2861",
+   "22c10dc2de7bdb14"
+  ],
+  "variante": {
+   "gancho": "impacto",
+   "duracao": "medio",
+   "ritmo": "normal",
+   "musica": "sem"
+  },
+  "duracao_s": 40.6,
+  "horario_local": "18:40",
+  "legenda_inicio": "Alagamento na Marginal Tietê, voos alterados em Congonhas e dezessete alertas da",
   "video_id": null,
   "publicado": true,
-  "quando": "2026-11-18T18:24:58+00:00"
+  "quando": "2026-11-19T02:51:32+00:00"
  }
 ]
