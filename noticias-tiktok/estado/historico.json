@@ -630,8 +630,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 126.5,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 134.5,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 0.913
  },
@@ -665,8 +665,8 @@
    "curtidas": 2,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 126.6,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 134.5,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 1.352
  },
@@ -698,8 +698,8 @@
    "curtidas": 7,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 126.6,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 134.5,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 3.046
  },
@@ -938,8 +938,8 @@
    "curtidas": 33,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 66.8,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 74.8,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 5.336
  },
@@ -992,8 +992,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 62.4,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 70.4,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 0.524
  },
@@ -1025,8 +1025,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 47.9,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 55.8,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 0.632
  },
@@ -1058,8 +1058,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 39.5,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 47.4,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 0.316
  },
@@ -1090,8 +1090,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 24.2,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 32.2,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   },
   "pontuacao": 1.274
  },
@@ -1119,12 +1119,12 @@
   "quando": "2026-11-19T02:51:32+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709709723515260180?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 42,
+   "visualizacoes": 64,
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 1,
-   "horas_no_ar": 15.8,
-   "coletado_em": "2026-11-19T18:37:51+00:00"
+   "horas_no_ar": 23.8,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
   }
  },
  {
@@ -1146,8 +1146,17 @@
   "duracao_s": 27.1,
   "horario_local": "06:40",
   "legenda_inicio": "A maior mudança nas jornadas de trabalho em quase 40 anos começa a valer no mês ",
-  "video_id": null,
+  "video_id": "7709954005283196181",
   "publicado": true,
-  "quando": "2026-11-19T18:39:20+00:00"
+  "quando": "2026-11-19T18:39:20+00:00",
+  "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7709954005283196181?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
+  "metricas": {
+   "visualizacoes": 70,
+   "curtidas": 2,
+   "comentarios": 0,
+   "compartilhamentos": 0,
+   "horas_no_ar": 8.0,
+   "coletado_em": "2026-11-20T02:36:50+00:00"
+  }
  }
 ]
