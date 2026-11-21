@@ -938,8 +938,8 @@
    "curtidas": 33,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 99.1,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 113.1,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 5.136
  },
@@ -992,8 +992,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 94.6,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 108.7,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 0.553
  },
@@ -1025,8 +1025,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 80.1,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 94.2,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 0.667
  },
@@ -1058,8 +1058,8 @@
    "curtidas": 0,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 71.7,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 85.8,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 0.333
  },
@@ -1090,8 +1090,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 56.4,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 70.5,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 1.066
  },
@@ -1123,8 +1123,8 @@
    "curtidas": 1,
    "comentarios": 0,
    "compartilhamentos": 1,
-   "horas_no_ar": 48.0,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 62.1,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 1.958
  },
@@ -1156,8 +1156,8 @@
    "curtidas": 3,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 32.2,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 46.3,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   },
   "pontuacao": 1.444
  },
@@ -1185,12 +1185,12 @@
   "quando": "2026-11-20T18:00:40+00:00",
   "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7710315109020683528?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
   "metricas": {
-   "visualizacoes": 98,
-   "curtidas": 7,
+   "visualizacoes": 118,
+   "curtidas": 8,
    "comentarios": 0,
    "compartilhamentos": 0,
-   "horas_no_ar": 8.8,
-   "coletado_em": "2026-11-21T02:50:59+00:00"
+   "horas_no_ar": 22.9,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
   }
  },
  {
@@ -1212,8 +1212,39 @@
   "duracao_s": 31.5,
   "horario_local": "18:40",
   "legenda_inicio": "A estreia de GTA 6 superou a do jogo anterior em quase cinco vezes, segundo a Ro",
+  "video_id": "7710452100098018580",
+  "publicado": true,
+  "quando": "2026-11-21T02:52:17+00:00",
+  "link_tiktok": "https://www.tiktok.com/@diego.jesus4262/video/7710452100098018580?utm_campaign=tt4d_open_api&utm_source=sbawrvdx8dp2aqiiu0",
+  "metricas": {
+   "visualizacoes": 71,
+   "curtidas": 1,
+   "comentarios": 0,
+   "compartilhamentos": 0,
+   "horas_no_ar": 14.1,
+   "coletado_em": "2026-11-21T16:55:44+00:00"
+  }
+ },
+ {
+  "assunto": "ONU adia para 2028 regras sobre robôs assassinos",
+  "titulo": "ONU adia regras sobre robôs assassinos",
+  "gancho_tela": "Regras só em 2028",
+  "categoria": "tecnologia",
+  "ids_posts": [
+   "cfbc500f8f230f60",
+   "33086d83d19f84d4"
+  ],
+  "variante": {
+   "gancho": "numero",
+   "duracao": "medio",
+   "ritmo": "rapido",
+   "musica": "sem"
+  },
+  "duracao_s": 40.5,
+  "horario_local": "06:40",
+  "legenda_inicio": "Armas que agem com pouca ou nenhuma supervisão humana ainda não têm regras globa",
   "video_id": null,
   "publicado": true,
-  "quando": "2026-11-21T02:52:17+00:00"
+  "quando": "2026-11-21T16:57:51+00:00"
  }
 ]

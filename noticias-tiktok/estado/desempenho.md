@@ -1,6 +1,6 @@
 # Desempenho do canal
 
-Vídeos publicados: **42**, com números maduros (24h ou mais): **16**.
+Vídeos publicados: **43**, com números maduros (24h ou mais): **16**.
 
 Visualizações somadas (vídeos medidos): **2.155**
 Interação média: **1.8%**
