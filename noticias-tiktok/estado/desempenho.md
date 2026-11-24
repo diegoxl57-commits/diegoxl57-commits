@@ -1,8 +1,8 @@
 # Desempenho do canal
 
-Vídeos publicados: **48**, com números maduros (24h ou mais): **22**.
+Vídeos publicados: **49**, com números maduros (24h ou mais): **22**.
 
-Visualizações somadas (vídeos medidos): **2.755**
+Visualizações somadas (vídeos medidos): **2.757**
 Interação média: **2.2%**
 
 ## Estilo de gancho
@@ -33,7 +33,7 @@ Interação média: **2.2%**
 
 | Opção | Vídeos | Nota média | Visualizações médias | Interação |
 |---|---|---|---|---|
-| sem | 14 | 1.63 | 143 | 2.7% |
+| sem | 14 | 1.63 | 144 | 2.7% |
 | tensa | 3 | 1.22 | 119 | 1.7% |
 | pulsante | 5 | 0.81 | 78 | 1.2% |
 
@@ -44,7 +44,7 @@ Interação média: **2.2%**
 | 20:48 | 1 | 5.08 | 537 | 6.1% |
 | 21:10 | 1 | 3.03 | 393 | 1.8% |
 | 06:40 | 6 | 1.27 | 86 | 2.8% |
-| 18:40 | 7 | 1.24 | 92 | 2.5% |
+| 18:40 | 7 | 1.24 | 93 | 2.5% |
 | 12:10 | 4 | 1.01 | 99 | 1.4% |
 | 07:40 | 2 | 0.80 | 88 | 0.9% |
 | 14:56 | 1 | 0.59 | 90 | 0.0% |
